@@ -1,6 +1,20 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 const Skills = () => {
+
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+
+  useEffect(() => {
+    const triggerAnimation = () => {
+      setAnimationTriggered(true);
+    };
+
+    if (!animationTriggered) {
+      triggerAnimation();
+    }
+  }, [animationTriggered]);
+
   const skillsData = [
     {
       skill: 'Angular',
@@ -105,7 +119,7 @@ const Skills = () => {
     },
   ];
 
-  // Define an array of different colors for each skill
+
   const colors = [
     'bg-red-600',  
     'bg-blue-500',   
@@ -119,22 +133,25 @@ const Skills = () => {
   ];
 
   return (
-    <div className="p-4 bg-gray-800">
-      <h2 className="text-3xl font-semibold text-white mb-7">My Skills</h2>
-      <div className="space-y-8">
-        {skillsData.map((skill, index) => (
-          <div key={index} className="text-white flex items-center">
-            {skill.svg}
-            <div
-              className={`h-8 ml-4 rounded-lg ${colors[index]} glowing-bar`}
-              style={{ flex: `0 0 ${skill.level}%` }}
-            >
-              {skill.level}%
-            </div>
+    <div className="p-4 bg-gray-800 h-screen">
+    <h2 className="text-6xl text-center font-bold text-white mb-7">My Skills</h2>
+    <div className="space-y-8">
+      {skillsData.map((skill, index) => (
+        <div key={index} className="text-white flex items-center">
+          {skill.svg}
+          <div
+            className={`h-8 ml-4 rounded-lg ${colors[index]} glowing-bar ${animationTriggered ? 'animate-grow-bar' : ''}`}
+            style={{
+              width: animationTriggered ? `${skill.level}%` : '0',
+              transition: `width ${animationTriggered ? '1.5s' : '0s'}`, 
+            }}
+          >
+            {animationTriggered ? `${skill.level}%` : '0%'}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
+  </div>
   );
   
 };
