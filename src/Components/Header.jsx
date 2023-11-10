@@ -10,16 +10,16 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-4 text-2xl">
             <li>
-              <a href="about" className="hover:text-sky-600 transition duration-300">About</a>
+              <a href="about" className="hover:text-sky-500 transition duration-300">About</a>
             </li>
             <li>
-              <a href="skills" className="hover:text-sky-600 transition duration-300">Skills</a>
+              <a href="skills" className="hover:text-sky-500 transition duration-300">Skills</a>
             </li>
             <li>
-              <a href="projects" className="hover:text-sky-600 transition duration-300">Projects</a>
+              <a href="projects" className="hover:text-sky-500 transition duration-300">Projects</a>
             </li>
             <li>
-              <a href="Contact" className="hover:text-sky-600 transition duration-300">Contact</a>
+              <a href="Contact" className="hover:text-sky-500 transition duration-300">Contact</a>
             </li>
           </ul>
         </nav>

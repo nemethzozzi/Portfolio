@@ -7,7 +7,7 @@ const About = () => {
         <h1 className="text-4xl font-semibold">Hello,</h1>
         <h1 className="text-6xl font-bold mt-7">
           <span className="text-white">I am</span>{" "}
-          <span className="text-sky-600">Zoltán Németh</span>
+          <span className="text-sky-500">Zoltán Németh</span>
         </h1>
         <p className="text-2xl mt-8">Currently learning in SZTE university.</p>
         <p className="text-2xl">I learn software engineering.</p>

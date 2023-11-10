@@ -3,134 +3,233 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
-
-
 const Projects = () => {
 
-const imageStyle = {
-  maxWidth: '100%',
-  maxHeight: '100%',
-};
+  const data = [
+    {
+      name: "Clothe Webshop",
+      description: "This was my first bigger unique project. You can see how it works",
+      images: [
+        "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      github: "https://github.com/nemethzozzi/VotingWebsite",
+      //demo: "https://ruhawebshopnz.web.app",
+      icons: [
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M16 2L3 7L5 24L16 30L27 24L29 7L16 2Z" fill="#DD0031"/>
+        <path d="M16 2V30L27 24L29 7L16 2Z" fill="#C3002F"/>
+        <path d="M15.9998 5.09375L7.87305 23.3638H10.9031L12.5368 19.2757H19.4348L21.0685 23.3638H24.0986L15.9998 5.09375ZM18.3736 16.7557H13.626L15.9998 11.0298L18.3736 16.7557Z" fill="white"/>
+      </svg>,
 
-const ImageSlider1 = () => {
-  const settings1 = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 43 43">
+        <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#1976d2"/>
+        <polygon points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264" fill="#fff"/>
+        <path d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z" fill="#fff"/>
+      </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
+        <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+        </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/>
+        <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/>
+      </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 50 50">
+        <path d="M25.01,8.565c-0.386-0.753-1.466-0.755-1.848,0l-2.347,4.426L15.404,2.547 c-0.471-0.874-1.798-0.653-1.952,0.325L8.003,37.997L30.25,18.75L25.01,8.565z" fill="#ffa000"/>
+        <path d="M25.795 22.604L20.815 12.992 8.003 37.997z" fill="#f57f17"/>
+        <path d="M35.859,11.838c-0.13-0.802-1.115-1.12-1.69-0.544L8.003,38.002l14.479,7.614 c0.917,0.512,2.034,0.512,2.951,0.001L40,38.005L35.859,11.838z" fill="#ffca28"/>
+        </svg>
+    ],
+
+    },
+    {
+      name: "Voting Website",
+      description: "text",
+      images: [
+        "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      github: "https://github.com/nemethzozzi/VotingWebsite",
+      //demo: "https://ruhawebshopnz.web.app",
+      icons: [
+        <svg className="svg-icon w-5 h-5" viewBox="0 0 256 256"> 
+        <path d="M127.929.002c33.227 0 66.455 0 99.682-.002 4.17 0 8.3.362 12.301 1.582 8.675 2.644 13.268 8.865 15.068 17.438.715 3.4.918 6.865.925 10.33.053 23.27.092 46.542.094 69.814.002 42.384.007 84.768-.08 127.151-.012 5.933-.328 11.931-3.257 17.336-3.249 5.994-7.697 10.738-14.45 12.824-1.22.377-2.494.806-3.745.806-2.882.002-5.687.716-8.56.716-65.067-.005-130.133.033-195.2-.07-5.292-.01-10.67-.395-15.697-2.548-1-.43-2.01-.79-2.89-1.46-6.4-4.877-10.746-10.96-11.678-19.191-.335-2.968-.442-5.92-.442-8.889.01-65.952.016-131.904.05-197.856.003-3.826.042-7.718 1.219-11.38C4.403 6.846 11.261 1.519 21.427.437 23.79.185 26.173.022 28.547.02 61.672-.007 94.801.002 127.928.002z" fill="#FB7A24"/><path d="M128.775 164.113c-.727 4.454-1.238 8.48-2.838 12.19-7.49 17.384-20.256 27.977-39.394 30.086-22.621 2.492-43.515-11.47-49.797-33.154-2.277-7.858-2.049-15.869-1.223-23.867.881-8.546 3.399-16.65 7.33-24.296.563-1.093.552-1.918-.152-2.977-6.036-9.078-8.378-19.107-7.528-29.932.455-5.786 1.86-11.32 4.483-16.504 7.689-15.185 24.57-28.072 47.179-25.932 19.88 1.88 38.293 19.029 41.167 38.315.145.968.417 1.918.735 3.346.476-2.586.82-4.72 1.265-6.834 3.703-17.521 20.854-35.855 45.164-36.082 24.64-.228 42.887 19.097 46.33 37.045 1.455 7.585 1.202 15.163.002 22.738a81.02 81.02 0 0 1-6.672 21.775c-.716 1.529-.642 2.63.275 4.05 5.307 8.224 7.649 17.252 7.349 27.056-.628 20.457-15.097 38.802-35.002 43.6-27.79 6.697-49.093-9.923-56.262-30.031-1.17-3.273-1.723-6.69-2.41-10.592zm50.489-35.94c.297-1.157 1.193-1.85 1.837-2.706 6.968-9.26 10.633-19.603 9.815-31.25-.596-8.5-7.587-14.488-16.05-14.171-8.469.317-14.85 6.848-14.97 15.322-.009.694.033 1.389-.01 2.078-.583 9.031-5.566 13.978-13.117 14.53-1.379.101-2.762.224-4.143.228-9.8.022-19.599.018-29.4.009-4.28-.004-8.524.462-12.6 1.72-19.027 5.87-30.122 18.882-33.796 38.275-.728 3.837-1.383 7.819-.125 11.76 1.805 5.653 5.17 9.857 11.126 11.263 6.173 1.457 11.55-.155 15.822-5.004 2.761-3.135 3.632-6.86 3.838-10.948.534-10.515 6.26-15.771 15.81-15.692 14.649.122 29.3.026 43.951.037 2.6.001 2.624.036 2.637 2.608.025 4.75-.121 9.507.062 14.252.298 7.747 7.114 14.186 15.016 14.413 8.148.233 15.411-5.794 15.942-13.661.458-6.81.429-13.661-.018-20.476-.346-5.275-3.2-9.035-8.036-11.217-1.16-.522-2.38-.913-3.591-1.37zm-91.832-15.984c3.151 0 5.723-.029 8.293.013 1.274.02 1.746-.528 1.736-1.777-.042-4.943.213-9.902-.102-14.827-.416-6.497-3.871-11.194-9.92-13.563-6.202-2.429-11.878-1.043-16.678 3.538-4.821 4.603-5.464 10.232-3.777 16.392 1.55 5.662 5.21 8.878 10.968 9.85 3.344.563 6.707.293 9.48.374z" fill="#FFF"/>
+        </svg>,
+
+        <svg className="svg-icon w-5 h-5" viewBox="0 0 25 25"> 
+          <path d="M12 5.5C5.27148 5.5 0 8.35547 0 12C0 15.6445 5.27148 18.5 12 18.5C18.7285 18.5 24 15.6445 24 12C24 8.35547 18.7285 5.5 12 5.5ZM10.7539 7.5H12.0645L11.6484 9.5H12.8184C13.5605 9.5 14.0586 9.60352 14.3418 9.86328C14.6191 10.1191 14.7031 10.5391 14.5918 11.1113L14.0723 13.5H12.7402L13.2188 11.291C13.2773 10.9883 13.2539 10.7773 13.1523 10.666C13.0508 10.5547 12.8281 10.5 12.4941 10.5H11.4453L10.8125 13.5H9.5L10.7539 7.5ZM5 9.5H7.66602C8.9375 9.5 9.70703 10.3516 9.40625 11.623C9.05664 13.0996 8.11914 13.5 6.39648 13.5H5.57227L5.31055 15H3.98633L5 9.5ZM15.5 9.5H18.166C19.4375 9.5 20.207 10.3516 19.9062 11.623C19.5566 13.0996 18.6191 13.5 16.8965 13.5H16.0723L15.8105 15H14.4863L15.5 9.5ZM6.13477 10.5L5.75781 12.5H6.61328C7.35352 12.5 8.04102 12.416 8.15625 11.3125C8.19922 10.8848 8.02148 10.5 7.16602 10.5H6.13477ZM16.6348 10.5L16.2578 12.5H17.1133C17.8535 12.5 18.541 12.416 18.6562 11.3125C18.6992 10.8848 18.5215 10.5 17.666 10.5H16.6348Z" fill="#777BB3"/>
+        </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+          <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
+          <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
+          <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+        </svg>,
+
+
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+          <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/>
+          <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/>
+          <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/>
+        </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 256 256"> 
+          <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"/>
+          <path d="M67.311746,213.932292 L86.902654,202.076241 C90.6821079,208.777346 94.1202286,214.447137 102.367086,214.447137 C110.272203,214.447137 115.256076,211.354819 115.256076,199.326883 L115.256076,117.528787 L139.313575,117.528787 L139.313575,199.666997 C139.313575,224.58433 124.707759,235.925943 103.3984,235.925943 C84.1532952,235.925943 72.9819429,225.958603 67.3113397,213.93026" fill="#000000"/>
+          <path d="M152.380952,211.354413 L171.969422,200.0128 C177.125994,208.433981 183.827911,214.619835 195.684368,214.619835 C205.652521,214.619835 212.009041,209.635962 212.009041,202.762159 C212.009041,194.513676 205.479416,191.592025 194.481168,186.78207 L188.468419,184.202565 C171.111213,176.81473 159.597308,167.53534 159.597308,147.944838 C159.597308,129.901308 173.344508,116.153295 194.825752,116.153295 C210.119924,116.153295 221.117765,121.48094 229.021663,135.400432 L210.29059,147.428775 C206.166146,140.040127 201.699556,137.119289 194.826159,137.119289 C187.78047,137.119289 183.312254,141.587098 183.312254,147.428775 C183.312254,154.646349 187.78047,157.568406 198.089956,162.036622 L204.103924,164.614095 C224.553448,173.378641 236.067352,182.313448 236.067352,202.418387 C236.067352,224.071924 219.055137,235.927975 196.200432,235.927975 C173.860978,235.927975 159.425829,225.274311 152.381359,211.354413" fill="#000000"/>
+        </svg>,
+
+
+
+      ], 
+    },
+    {
+      name: "Rf1 Project",
+      description: "text",
+      images: [
+        "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      github: "https://github.com/nemethzozzi/VotingWebsite",
+      //demo: "https://ruhawebshopnz.web.app",
+      icons: [
+        <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
+        <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+        </svg>,
+
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/>
+        <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/>
+        </svg>,
+      ], 
+    },
+    {
+      name: "Legyen ön is milliomos",
+      description: "",
+      images: [
+        "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      github: "https://github.com/nemethzozzi/VotingWebsite",
+      //demo: "https://ruhawebshopnz.web.app",
+      icons: [
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
+        <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+        </svg>
+
+      ], 
+    },
+    {
+      name: "snake",
+      description: "",
+      images: [
+        "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      github: "https://github.com/nemethzozzi/VotingWebsite",
+      //demo: "https://ruhawebshopnz.web.app",
+      icons: [
+        <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
+        <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
+        <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
+        <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+        </svg>
+      ], 
+    }
+  ]
+
+  const imageStyle = {
+    maxWidth: '100%',
+    maxHeight: '100%',
   };
 
-  return (
-    <Slider {...settings1}>
-      <div>
-        <img src="/ruhawebshop1.png" alt="Image 1" style={imageStyle}/>
-      </div>
-      <div>
-        <img src="/ruhawebshop2.png" alt="Image 2" style={imageStyle}/>
-      </div>
-      <div>
-        <img src="/ruhawebshop3.png" alt="Image 2" style={imageStyle}/>
-      </div>
-      <div>
-        <img src="/ruhawebshop4.png" alt="Image 2" style={imageStyle}/>
-      </div>
-    </Slider>
-  );
-};
-
-const ImageSlider2 = () => {
-  const settings2 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2, // Adjust the number of slides to show for the second slider
-    slidesToScroll: 2, // Adjust the number of slides to scroll for the second slider
-    initialSlide: 0,
+  const ImageSlider = ({ images }) => {
+    const settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+    };
+  
+    return (
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt={`Image ${index + 1}`} style={imageStyle} />
+          </div>
+        ))}
+      </Slider>
+    );
   };
 
-  return (
-    <Slider {...settings2}>
-      <div>
-        <img src="/image3.png" alt="Image 3" />
+
+  const ProjectCard = ({ name, description, github, /*demo,*/ icons, images }) => (
+    <div className="bg-gray-500 p-4 rounded-lg shadow-md flex flex-col md:flex-row mb-10">
+      <div className="md:w-1/2 pr-4">
+        <ImageSlider images={images} />
       </div>
-      <div>
-        <img src="/image4.png" alt="Image 4" />
+      <div className="md:w-1/2 mt-4 md:mt-0 flex flex-col justify-between">
+        <div>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">{name}</h2>
+          <p className="text-gray-600 ml-10 0 mr-10">{description}
+            <div className="flex items-center mt-3">
+            {icons.map((icon, index) => (
+              <div key={index} className="mr-2">
+                {icon}
+              </div>
+            ))}
+            </div>
+          </p>
+        </div>
+        
+        <div className="mt-5 mb-3 flex items-center justify-center">
+        <button className="mr-5 bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-2 rounded">
+              <a href={github} className="flex flex-col items-center">
+                GitHub
+                <svg className="svg-icon w-4 h-4" fill="white" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              </a>
+            </button>
+            {/*
+            <button className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-2 rounded">
+            <a href={demo} className="flex flex-col items-center">
+                Live Demo
+                <svg className="svg-icon w-4 h-4" fill="white" viewBox="0 0 50 50">
+                  <path d="M 8.03125 8.4570312 C 7.770375 8.4589063 7.5103125 8.5625312 7.3203125 8.7695312 C 3.3953125 13.041531 1 18.741 1 25 C 1 31.259 3.3953125 36.958469 7.3203125 41.230469 C 7.7003125 41.644469 8.3569063 41.643094 8.7539062 41.246094 L 10.882812 39.117188 C 11.265812 38.734187 11.263391 38.124656 10.900391 37.722656 C 7.8553906 34.352656 6 29.889 6 25 C 6 20.111 7.8553906 15.647344 10.900391 12.277344 C 11.263391 11.875344 11.265813 11.266812 10.882812 10.882812 L 8.7539062 8.7539062 C 8.5554063 8.5554063 8.292125 8.4551562 8.03125 8.4570312 z M 41.96875 8.4570312 C 41.707625 8.4554062 41.444594 8.5554062 41.246094 8.7539062 L 39.115234 10.884766 C 38.732234 11.267766 38.734656 11.875344 39.097656 12.277344 C 42.143656 15.646344 44 20.111 44 25 C 44 29.889 42.144609 34.352656 39.099609 37.722656 C 38.736609 38.124656 38.734188 38.733187 39.117188 39.117188 L 41.246094 41.246094 C 41.643094 41.643094 42.299687 41.643469 42.679688 41.230469 C 46.604687 36.958469 49 31.259 49 25 C 49 18.741 46.604687 13.041531 42.679688 8.7695312 C 42.489688 8.5625312 42.229875 8.4586563 41.96875 8.4570312 z M 35.625 14.837891 C 35.355125 14.824516 35.079594 14.920406 34.871094 15.128906 L 32.740234 17.259766 C 32.381234 17.618766 32.341969 18.196938 32.667969 18.585938 C 34.123969 20.323937 35 22.561 35 25 C 35 27.439 34.123969 29.675109 32.667969 31.412109 C 32.341969 31.801109 32.381234 32.379281 32.740234 32.738281 L 34.871094 34.871094 C 35.288094 35.288094 35.967516 35.250687 36.353516 34.804688 C 38.625516 32.175687 40 28.748 40 25 C 40 21.252 38.625516 17.824312 36.353516 15.195312 C 36.160516 14.972313 35.894875 14.851266 35.625 14.837891 z M 14.375 14.839844 C 14.105125 14.853219 13.839484 14.974266 13.646484 15.197266 C 11.374484 17.825266 10 21.252 10 25 C 10 28.748 11.374484 32.175688 13.646484 34.804688 C 14.032484 35.250687 14.711906 35.288094 15.128906 34.871094 L 17.259766 32.740234 C 17.618766 32.381234 17.658031 31.803062 17.332031 31.414062 C 15.876031 29.676062 15 27.439 15 25 C 15 22.561 15.876031 20.324891 17.332031 18.587891 C 17.658031 18.198891 17.618766 17.620719 17.259766 17.261719 L 15.128906 15.128906 C 14.920406 14.920406 14.644875 14.826469 14.375 14.839844 z M 25 19 C 21.686 19 19 21.686 19 25 C 19 28.314 21.686 31 25 31 C 28.314 31 31 28.314 31 25 C 31 21.686 28.314 19 25 19 z"></path>
+                </svg>
+              </a>
+            </button>
+            */}
+        </div>
       </div>
-      {/* Add more image slides as needed for the second slider */}
-    </Slider>
+    </div>
   );
-};
-
-const ImageSlider3 = () => {
-  const settings3 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Adjust the number of slides to show for the second slider
-    slidesToScroll: 3, // Adjust the number of slides to scroll for the second slider
-    initialSlide: 0,
-  };
-
-  return (
-    <Slider {...settings3}>
-      <div>
-        <img src="/image3.png" alt="Image 3" />
-      </div>
-      <div>
-        <img src="/image4.png" alt="Image 4" />
-      </div>
-      {/* Add more image slides as needed for the second slider */}
-    </Slider>
-  );
-};
-
-const ImageSlider4 = () => {
-  const settings4 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4, // Adjust the number of slides to show for the second slider
-    slidesToScroll: 4, // Adjust the number of slides to scroll for the second slider
-    initialSlide: 0,
-  };
-
-  return (
-    <Slider {...settings4}>
-      <div>
-        <img src="/image3.png" alt="Image 3" />
-      </div>
-      <div>
-        <img src="/image4.png" alt="Image 4" />
-      </div>
-      {/* Add more image slides as needed for the second slider */}
-    </Slider>
-  );
-};
-
-const ImageSlider5 = () => {
-  const settings5 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5, // Adjust the number of slides to show for the second slider
-    slidesToScroll: 5, // Adjust the number of slides to scroll for the second slider
-    initialSlide: 0,
-  };
-
-  return (
-    <Slider {...settings5}>
-      <div>
-        <img src="/image3.png" alt="Image 3" />
-      </div>
-      <div>
-        <img src="/image4.png" alt="Image 4" />
-      </div>
-      {/* Add more image slides as needed for the second slider */}
-    </Slider>
-  );
-};
+  
+  
 
 
   return (
@@ -138,124 +237,10 @@ const ImageSlider5 = () => {
       <div className="max-w-screen-xl mx-auto">
         <h1 className="text-6xl text-center font-bold text-white mb-7 mt-10">My Projects</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <div className="bg-gray-500 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Clothe Webshop</h2>
-            <p className="text-gray-600 mb-3">
-              This was my first bigger unique project. You can see how it works{" "}
-              <a href="https://ruhawebshopnz.web.app" className="text-gray-800 hover:text-white">
-                here
-              </a>
-            </p>
-            <ImageSlider1 />
-            <p className="text-gray-600 mt-5 mb-3">
-              <div className="flex items-center">
-              <span style={{ marginTop: '-13px' }}>The code: </span>
-                <a href="https://github.com/nemethzozzi/ClothingWebshop">
-                <svg className="svg-icon w-8 h-8 hover:fill-current hover:text-white" fill="9ca3af" viewBox="0 0 25 25" style={{ marginLeft: '8px' }}>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-            </div>
-          </p>
-          <div className="flex space-x-2">
-          <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 30 30">
-            <path d="M16 2L3 7L5 24L16 30L27 24L29 7L16 2Z" fill="#DD0031"/>
-            <path d="M16 2V30L27 24L29 7L16 2Z" fill="#C3002F"/>
-            <path d="M15.9998 5.09375L7.87305 23.3638H10.9031L12.5368 19.2757H19.4348L21.0685 23.3638H24.0986L15.9998 5.09375ZM18.3736 16.7557H13.626L15.9998 11.0298L18.3736 16.7557Z" fill="white"/>
-          </svg>
-          <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 43 43">
-            <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#1976d2"/>
-            <polygon points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264" fill="#fff"/>
-            <path d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z" fill="#fff"/>
-          </svg>
-          <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 30 30">
-            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/>
-            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/>
-            <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
-          </svg>
-          <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 30 30">
-            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/>
-            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/>
-            <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/>
-          </svg>
-          <svg className="svg-icon w-4 h-4 text-white" viewBox="0 0 50 50">
-            <path d="M25.01,8.565c-0.386-0.753-1.466-0.755-1.848,0l-2.347,4.426L15.404,2.547 c-0.471-0.874-1.798-0.653-1.952,0.325L8.003,37.997L30.25,18.75L25.01,8.565z" fill="#ffa000"/>
-            <path d="M25.795 22.604L20.815 12.992 8.003 37.997z" fill="#f57f17"/>
-            <path d="M35.859,11.838c-0.13-0.802-1.115-1.12-1.69-0.544L8.003,38.002l14.479,7.614 c0.917,0.512,2.034,0.512,2.951,0.001L40,38.005L35.859,11.838z" fill="#ffca28"/>
-          </svg>
-          </div>
-  
-          </div>
-          <div className="bg-gray-500 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Voting Website</h2>
-            <p className="text-gray-600">
-              text here
-            </p>
-             <ImageSlider2 />
-            <p className="text-gray-600 mt-5 mb-3">
-              <div className="flex items-center">
-              <span style={{ marginTop: '-13px' }}>The code: </span>
-                <a href="https://github.com/nemethzozzi/VotingWebsite">
-                <svg className="svg-icon w-8 h-8 hover:fill-current hover:text-white" fill="9ca3af" viewBox="0 0 25 25" style={{ marginLeft: '8px' }}>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-            </div>
-          </p>
-          </div>
-
-          <div className="bg-gray-500 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">RF1 Project</h2>
-            <p className="text-gray-600">
-              text here
-            </p>
-            <ImageSlider3 />
-            <p className="text-gray-600 mt-5 mb-3">
-              <div className="flex items-center">
-              <span style={{ marginTop: '-13px' }}>The code: </span>
-                <a href="https://github.com/nemethzozzi/VotingWebsite">
-                <svg className="svg-icon w-8 h-8 hover:fill-current hover:text-white" fill="9ca3af" viewBox="0 0 25 25" style={{ marginLeft: '8px' }}>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-            </div>
-          </p>
-          </div>
-          <div className="bg-gray-500 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Legyen ön is Milliomos</h2>
-            <p className="text-gray-600">
-              text here
-            </p>
-            <ImageSlider4 />
-            <p className="text-gray-600 mt-5 mb-3">
-              <div className="flex items-center">
-              <span style={{ marginTop: '-13px' }}>The code: </span>
-                <a href="https://github.com/nemethzozzi/VotingWebsite">
-                <svg className="svg-icon w-8 h-8 hover:fill-current hover:text-white" fill="9ca3af" viewBox="0 0 25 25" style={{ marginLeft: '8px' }}>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-            </div>
-          </p>
-          </div>
-          <div className="bg-gray-500 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Snake</h2>
-            <p className="text-gray-600">
-              text here
-            </p>
-            <ImageSlider5 />
-            <p className="text-gray-600 mt-5 mb-3">
-              <div className="flex items-center">
-              <span style={{ marginTop: '-13px' }}>The code: </span>
-                <a href="https://github.com/nemethzozzi/VotingWebsite">
-                <svg className="svg-icon w-8 h-8 hover:fill-current hover:text-white" fill="9ca3af" viewBox="0 0 25 25" style={{ marginLeft: '8px' }}>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-            </div>
-          </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+          {data.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </div>
