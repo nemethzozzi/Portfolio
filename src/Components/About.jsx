@@ -2,6 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
+    <div id="about">
     <div className="bg-gray-800 h-screen mt-10 p-4 text-white flex">
       <div className="w-3/4 mt-20 ml-4">
         <h1 className="text-4xl font-semibold">Hello,</h1>
@@ -21,6 +22,7 @@ const About = () => {
   />
   <div className="animation-shape">
   </div>
+</div>
 </div>
 
 

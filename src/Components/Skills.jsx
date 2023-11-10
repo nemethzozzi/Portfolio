@@ -132,8 +132,9 @@ const Skills = () => {
   ];
 
   return (
+    <div id="skills">
     <div className="p-4 bg-gray-800 h-screen">
-      <h2 className="text-6xl text-center font-bold text-white mb-7">My Skills</h2>
+      <h2 className="text-6xl text-center font-bold text-white mb-10 mt-10">My Skills</h2>
       <div className="space-y-8">
         {skillsData.map((skill, index) => (
           <div key={index} className="text-white flex items-center">
@@ -152,6 +153,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
   

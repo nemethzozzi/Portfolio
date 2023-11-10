@@ -52,6 +52,7 @@ const Contact = () => {
 
 
 return (
+  <div id="contact">
     <div className="flex items-center justify-center h-screen bg-gray-800">
     <div className="max-w-screen-xl mx-auto p-4">
       <h1 className="text-6xl text-center font-bold text-white mb-7">Contact Me</h1>
@@ -73,6 +74,7 @@ return (
         </div>
       </div>
     </div>
+  </div>
   </div>
 );    
 };

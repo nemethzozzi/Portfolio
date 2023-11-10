@@ -15,7 +15,7 @@ const Projects = () => {
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",
       ],
-      github: "https://github.com/nemethzozzi/VotingWebsite",
+      github: "https://github.com/nemethzozzi/ClothingWebshop",
       //demo: "https://ruhawebshopnz.web.app",
       icons: [
         <svg className="svg-icon w-4 h-4" viewBox="0 0 30 30">
@@ -233,8 +233,9 @@ const Projects = () => {
 
 
   return (
+    <div id="projects">
     <div className="bg-gray-800 p-4">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-8">
         <h1 className="text-6xl text-center font-bold text-white mb-7 mt-10">My Projects</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
@@ -243,6 +244,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
