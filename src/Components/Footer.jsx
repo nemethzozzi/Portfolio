@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="text-gray-500 bg-gray-800 px-4 py-5 max-w-screen-xl mx-auto md:px-8" style={{ maxWidth: '100%' }}>
+    <footer className="bg-gray-800 bg-opacity-85 border-t-4 border-gray-500 px-4 py-5 max-w-screen-xl mx-auto md:px-8" style={{ maxWidth: '100%' }}>
       <ul className="flex items-center justify-center mt-8 space-x-4 sm:space-x-4">
           <a href="https://github.com/nemethzozzi">
             <svg className="svg-icon w-4 h-4 hover:fill-current hover:text-white" fill="#9ca3af" viewBox="0 0 16 16">

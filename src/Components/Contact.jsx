@@ -14,7 +14,7 @@ const Contact = () => {
         },
         {
           label: "Email",
-          text: "nemethzoltan0524",
+          text: "nemethzoltan0524@gmail.com",
           svg: (
             <svg className="svg-icon w-8 h-8" viewBox="0 0 22 22">
                 <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,6H19a1,1,0,0,1,1,1l-8,4.88L4,7A1,1,0,0,1,5,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9.28l7.48,4.57a1,1,0,0,0,1,0L20,9.28Z"/>
@@ -54,9 +54,9 @@ const Contact = () => {
 return (
   <div id="contact">
     <div className="flex items-center justify-center h-screen bg-gray-800">
-    <div className="max-w-screen-xl mx-auto p-4">
+    <div className="max-w-screen-xl mx-8 p-10">
       <h1 className="text-6xl text-center font-bold text-white mb-7">Contact Me</h1>
-      <div className="border-4 border-gray-500 rounded-lg p-4 shadow-md">
+      <div className="border-4 border-gray-500 rounded-lg p-8 shadow-md">
         <div className="grid grid-cols-2 gap-4 sm:gap-8 mt-8">
           {contactItems.map((item, index) => (
             <div key={index} className="flex items-center text-center">

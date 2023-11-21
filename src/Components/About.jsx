@@ -13,20 +13,16 @@ const About = () => {
         <p className="text-2xl mt-8">Currently learning in SZTE university.</p>
         <p className="text-2xl">I learn software engineering.</p>
       </div>
-
-      <div className="w-2/5 flex justify-start mt-20">
-  <img
-    src="/tabló.jpg"
-    alt="Zoltán Németh"
-    className="w-80 h-80 rounded-full object-cover animation-container"
-  />
-  <div className="animation-shape">
-  </div>
-</div>
-</div>
-
-
-
+        <div className="w-2/5 flex justify-start mt-20">
+        <img
+          src="/tabló.jpg"
+          alt="Zoltán Németh"
+          className="w-80 h-80 rounded-full object-cover animation-container"
+        />
+        <div className="animation-shape">
+        </div>
+      </div>
+      </div>
     </div>
   );
 };

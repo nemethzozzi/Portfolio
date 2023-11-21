@@ -9,9 +9,9 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#2d2d2d'}}>
       <Header />
-      <div className="container mx-auto" style={{ flex: 1 }}>
+      <div className="container mx-auto max-w-full" style={{ flex: 1 }}>
         <About />
         <Skills />
         <Projects />
