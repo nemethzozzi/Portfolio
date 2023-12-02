@@ -234,7 +234,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-    <div className="bg-gray-800 p-4">
+    <div className="p-4">
       <div className="max-w-screen-xl mx-8">
         <h1 className="text-6xl text-center font-bold text-white mb-7 mt-10">My Projects</h1>
 

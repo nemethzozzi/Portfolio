@@ -53,7 +53,7 @@ const Contact = () => {
 
 return (
   <div id="contact">
-    <div className="flex items-center justify-center h-screen bg-gray-800">
+    <div className="flex items-center justify-center h-screen">
     <div className="max-w-screen-xl mx-8 p-10">
       <h1 className="text-6xl text-center font-bold text-white mb-7">Contact Me</h1>
       <div className="border-4 border-gray-500 rounded-lg p-8 shadow-md">

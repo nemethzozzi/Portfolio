@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './styles.css';
 import Header from './Components/Header';
 import About from './Components/About';
@@ -6,11 +7,16 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 
-
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#2d2d2d'}}>
-      <Header />
+    <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: darkMode ? '#2d2d2d' : '#fff', color: darkMode ? '#fff' : '#000' }}>
+      <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <div className="container mx-auto max-w-full" style={{ flex: 1 }}>
         <About />
         <Skills />
