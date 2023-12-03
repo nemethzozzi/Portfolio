@@ -34,7 +34,7 @@ const Contact = ({ darkMode }) => {
       <div className={`flex items-center justify-center h-screen ${darkMode ? 'bg-dark' : 'bg-light'}`}>
         <div className="max-w-screen-xl mx-8 p-10">
           <h1 className={`text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-7`}>Contact Me</h1>
-          <div className={`border-4 border-gray-500 rounded-lg p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}>
+          <div className={`border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}>
             <div className="grid grid-cols-2 gap-4 sm:gap-8 mt-8">
               {contactItems.map((item, index) => (
                 <div key={index} className={`flex items-center text-center ${darkMode ? 'text-white' : 'text-black'}`}>
