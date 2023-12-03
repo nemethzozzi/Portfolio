@@ -23,29 +23,6 @@
 
 
 
-/*Skills.jsx*/
-@keyframes glow {
-    0% {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.743);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.671), 0 0 2px rgba(83, 193, 222);
-    }
-    100% {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    }
-  }
-  
-  .glowing-bar {
-    animation: glow 5s infinite;
-  }
-
-  .your-hover-class:hover {
-    /* Define your hover styles here */
-    /* For example, you can change the SVG's color or scale it */
-    fill: bg-sky-600;
-    transform: scale(1.1);
-  }
 
   
   

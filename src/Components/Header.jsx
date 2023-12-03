@@ -10,7 +10,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
   };
 
   return (
-    <header className={`bg-gray-800 bg-opacity-90 text-white py-2 fixed w-full top-0 shadow-md z-10 ${darkMode ? 'dark' : ''}`}>
+    <header className={`bg-sky-800 bg-opacity-90 text-gray-400 py-2 fixed w-full top-0 shadow-md z-10 ${darkMode ? 'dark' : ''}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-4xl font-bold mb-2">
           Portfolio
@@ -27,18 +27,18 @@ const Header = ({ toggleDarkMode, darkMode }) => {
             )}
           </button>
           <nav>
-            <ul className="flex space-x-4 text-2xl">
+            <ul className="flex space-x-4 text-3xl">
               <li>
-                <button onClick={() => scrollToSection('about')} className="hover:text-sky-500 transition duration-300">About</button>
+                <button onClick={() => scrollToSection('about')} className="hover:text-white transition duration-300">About</button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('skills')} className="hover:text-sky-500 transition duration-300">Skills</button>
+                <button onClick={() => scrollToSection('skills')} className="hover:text-white transition duration-300">Skills</button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('projects')} className="hover:text-sky-500 transition duration-300">Projects</button>
+                <button onClick={() => scrollToSection('projects')} className="hover:text-white transition duration-300">Projects</button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="hover:text-sky-500 transition duration-300">Contact</button>
+                <button onClick={() => scrollToSection('contact')} className="hover:text-white transition duration-300">Contact</button>
               </li>
             </ul>
           </nav>
