@@ -26,18 +26,18 @@ const Skills = ({ darkMode }) => {
           {/* Frontend Content */}
           <div key="frontend" className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4">
             <div className="flex-1 m-10">
-              <h3 className={`text-4xl font-bold mb-10 ${darkMode ? 'text-white' : 'text-black'}`}>
+              <h3 className={`text-4xl font-bold mb-10 ml-5 ${darkMode ? 'text-white' : 'text-black'}`}>
                 Frontend
               </h3>
               {frontendData.map((skill, index) => (
-                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1`}>
+                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-5`}>
                       <img
                         src={skill.icon[0]}
                         alt={`${skill.skill} icon`}
                         className="w-8 h-8"
                       />
                       <div
-                        className={`h-8 ml-4 rounded-lg mb-5 mt-5 ${skill.color} bar ${
+                        className={`h-6 ml-4 rounded-lg mb-5 mt-5 ${skill.color} bar ${
                           inView ? 'animate-grow-bar' : ''
                         }`}
                         style={{
@@ -66,14 +66,14 @@ const Skills = ({ darkMode }) => {
               <img src="backend.png" alt="Backend" className="w-2/3 h-auto" />
             </div>
             <div className="flex-1 m-10">
-              <h3 className={`text-right text-4xl font-bold mb-10 ${darkMode ? 'text-white' : 'text-black'}`}>
+              <h3 className={`text-right text-4xl font-bold mb-10 mr-5 ${darkMode ? 'text-white' : 'text-black'}`}>
                 Backend
               </h3>
               {backendData.map((skill, index) => (
-                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 items-right justify-end w-full bg-black`}>
-                    <div className="flex items-right justify-end w-full bg-white">
+                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center`}>
+                    <div className="flex items-center justify-end w-full">
                       <div
-                        className={`h-8 mr-4 rounded-lg mb-5 mt-5 ${skill.color} bar ${
+                        className={`h-6 mr-4 rounded-lg mb-5 mt-5 ${skill.color} bar ${
                           inView ? 'animate-grow-bar' : ''
                         }`}
                         style={{
