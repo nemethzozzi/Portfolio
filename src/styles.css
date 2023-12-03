@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Header.jsx*/
+
+button.relative {
+  position: relative;
+}
+
+
+button.relative:hover .underline {
+  width: 100%;
+}
+
+button.relative .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white; /* Adjust the color as needed */
+  transition: width 0.8s ease;
+}
+
+
 /*About.jsx*/
 @keyframes morph {
   0%,

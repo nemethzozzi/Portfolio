@@ -1,4 +1,3 @@
-// Header.js
 import React from 'react';
 
 const Header = ({ toggleDarkMode, darkMode }) => {
@@ -29,16 +28,40 @@ const Header = ({ toggleDarkMode, darkMode }) => {
           <nav>
             <ul className="flex space-x-4 text-3xl">
               <li>
-                <button onClick={() => scrollToSection('about')} className="hover:text-white transition duration-300">About</button>
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="hover:text-white transition duration-300 relative"
+                >
+                  About
+                  <span className="underline"></span>
+                </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('skills')} className="hover:text-white transition duration-300">Skills</button>
+                <button
+                  onClick={() => scrollToSection('skills')}
+                  className="hover:text-white transition duration-300 relative"
+                >
+                  Skills
+                  <span className="underline"></span>
+                </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('projects')} className="hover:text-white transition duration-300">Projects</button>
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="hover:text-white transition duration-300 relative"
+                >
+                  Projects
+                  <span className="underline"></span>
+                </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="hover:text-white transition duration-300">Contact</button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="hover:text-white transition duration-300 relative"
+                >
+                  Contact
+                  <span className="underline"></span>
+                </button>
               </li>
             </ul>
           </nav>

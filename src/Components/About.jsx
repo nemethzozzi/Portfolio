@@ -44,8 +44,8 @@ const About = ({ darkMode }) => {
               </svg>
             </a>
             <a href="mailto:nemethzoltan0524@gmail.com" className="hover:text-sky-500 hover:scale-110 transition-transform">
-            <svg className="svg-icon w-8 h-8 hover:fill-current" fill="#9ca3af" viewBox="0 0 22 22">
-              <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,6H19a1,1,0,0,1,1,1l-8,4.88L4,7A1,1,0,0,1,5,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9.28l7.48,4.57a1,1,0,0,0,1,0L20,9.28Z"/>
+            <svg className="svg-icon w-8 h-8 hover:fill-current" fill="#9ca3af" viewBox="0 0 50 50">
+            <path d="M 5.5 7 C 3.019531 7 1 9.019531 1 11.5 L 1 11.925781 L 25 29 L 49 11.925781 L 49 11.5 C 49 9.019531 46.980469 7 44.5 7 Z M 6.351563 9 L 43.644531 9 L 25 22 Z M 1 14.027344 L 1 38.5 C 1 40.980469 3.019531 43 5.5 43 L 44.5 43 C 46.980469 43 49 40.980469 49 38.5 L 49 14.027344 L 43 18.296875 L 43 41 L 7 41 L 7 18.296875 Z"/>
             </svg>
             </a>
             <a href="https://www.linkedin.com/in/zoltán-németh-15532928a/" className="hover:text-sky-500 hover:scale-110 transition-transform">
@@ -62,11 +62,12 @@ const About = ({ darkMode }) => {
 
           {/* Download CV button */}
           <button
-            className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded mt-8"
-            onClick={handleDownloadCV}
-          >
-            Download CV
-          </button>
+          className="border-2 border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white hover:scale-110 font-bold py-2 px-4 rounded mt-8 transition-all"
+          onClick={handleDownloadCV}
+        >
+          Download CV
+        </button>
+
         </div>
         <div className="w-full md:w-2/5 flex justify-start mt-20 order-1 md:order-2">
           <img
