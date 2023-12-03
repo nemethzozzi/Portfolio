@@ -19,12 +19,12 @@ const Skills = ({ darkMode }) => {
   return (
     <div id="skills" ref={ref} onClick={handleContainerClick} className="cursor-pointer">
       <div className={`p-4 h-screen ml-20 mr-20 ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-        <h2 className={`text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-10`}>
+        <h2 className={`text-8xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-40 mt-10`}>
           My Skills
         </h2>
         <CardFlip isFlipped={isFlipped} flipDirection="horizontal">
           {/* Frontend Content */}
-          <div key="frontend" className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4">
+          <div key="frontend" className="space-y-8 bg-gray-300  bg-opacity-70 rounded-2xl flex items-center border-gray-500 border-4">
             <div className="flex-1 m-10">
               <h3 className={`text-4xl font-bold mb-10 ml-5 ${darkMode ? 'text-white' : 'text-black'}`}>
                 Frontend
@@ -55,14 +55,14 @@ const Skills = ({ darkMode }) => {
                 </div>
               ))}
             </div>
-            <div className="w-2/5 h-full flex items-center justify-center bg-blue-700">
+            <div className="w-2/5 h-full flex items-center justify-center">
               <img src="frontend.png" alt="Frontend" className="w-2/3 h-auto" />
             </div>
           </div>
             
           {/* Backend Content */}
           <div key="backend" className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4">
-            <div className="w-2/5 h-full flex items-center justify-center bg-orange-700">
+            <div className="w-2/5 h-full flex items-center justify-center">
               <img src="backend.png" alt="Backend" className="w-2/3 h-auto" />
             </div>
             <div className="flex-1 m-10">
