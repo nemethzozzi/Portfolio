@@ -24,13 +24,20 @@ const Skills = ({ darkMode }) => {
         </h2>
         <CardFlip isFlipped={isFlipped} flipDirection="horizontal">
           {/* Frontend Content */}
-          <div key="frontend" className="space-y-8 bg-gray-300  bg-opacity-70 rounded-2xl flex items-center border-gray-500 border-4">
+          <div key="frontend"
+          className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4"
+          style={{
+            backgroundImage: 'url("frontend_background.png")',
+            backgroundSize: 'contain',  
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat', 
+          }}>
             <div className="flex-1 m-10">
               <h3 className={`text-4xl font-bold mb-10 ml-5 ${darkMode ? 'text-white' : 'text-black'}`}>
                 Frontend
               </h3>
               {frontendData.map((skill, index) => (
-                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-5`}>
+                <div key={index} className={`bg-black bg-opacity-30 backdrop-filter backdrop-blur-md ${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-5`}>
                       <img
                         src={skill.icon[0]}
                         alt={`${skill.skill} icon`}
@@ -61,7 +68,14 @@ const Skills = ({ darkMode }) => {
           </div>
             
           {/* Backend Content */}
-          <div key="backend" className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4">
+          <div key="backend"
+          className="space-y-8 bg-white bg-opacity-10 rounded-2xl flex items-center border-gray-500 border-4"
+          style={{
+            backgroundImage: 'url("backend_background.png")',
+            backgroundSize: 'contain', 
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat', 
+          }}>
             <div className="w-2/5 h-full flex items-center justify-center">
               <img src="backend.png" alt="Backend" className="w-2/3 h-auto" />
             </div>
@@ -70,7 +84,7 @@ const Skills = ({ darkMode }) => {
                 Backend
               </h3>
               {backendData.map((skill, index) => (
-                <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center`}>
+                <div key={index} className={`bg-black bg-opacity-30 backdrop-filter backdrop-blur-md ${darkMode ? 'text-white' : 'text-black'} flex items-center`}>
                     <div className="flex items-center justify-end w-full">
                       <div
                         className={`h-6 mr-4 rounded-lg mb-5 mt-5 ${skill.color} bar ${
