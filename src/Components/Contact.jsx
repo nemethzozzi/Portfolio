@@ -39,28 +39,30 @@ const Contact = ({ darkMode }) => {
   };
 
   return (
-    <div id="contact" ref={ref} onClick={handleContainerClick} className="cursor-pointer">
+    <div id="contact">
       <div className={`flex items-center justify-center h-screen ${darkMode ? 'bg-dark' : 'bg-light'}`}>
         <div className="max-w-screen-xl mx-8 p-10">
           <h1 className={`text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-7`}>Contact Me</h1>
           <div>
             <CardFlip isFlipped={isFlipped} flipDirection="vertical">
               {/* Front side */}
-                <div className={`border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}
+                <div className={`cursor-pointer border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}
                      style={{ 
                      height: '350px', 
                      width: '600px',
                      }}
+                     ref={ref} onClick={handleContainerClick}
                      >
                   <img src="qr.png" alt="QR Code" className="w-1/2 h-full mx-auto" />
                   <p className= "text-2xl text-center animate-pulse font-bold">Or click on me</p>
                 </div>
               {/* Back side */}
-              <div className={`grid grid-cols-2 gap-4 sm:gap-8 mt-8 border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}
+              <div className={`cursor-pointer grid grid-cols-2 gap-4 sm:gap-8 mt-8 border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}
                    style={{ 
                    height: '350px', 
                    width: '600px',
                    }}
+                   ref={ref} onClick={handleContainerClick}
                    >
                 {contactItems.map((item, index) => (
                   <div key={index} className={`flex items-center text-center ${darkMode ? 'text-white' : 'text-black'}`}>

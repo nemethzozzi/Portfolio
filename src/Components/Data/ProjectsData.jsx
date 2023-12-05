@@ -10,6 +10,13 @@ const ProjectData = [
         "/ruhawebshop2.png",
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",
+
+      ],
+      additionalImages: [
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+        "/ruhawebshop4.png",
       ],
       github: "https://github.com/nemethzozzi/ClothingWebshop",
       //demo: "https://ruhawebshopnz.web.app",
@@ -30,6 +37,11 @@ const ProjectData = [
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",
       ],
+      additionalImages: [
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
       github: "https://github.com/nemethzozzi/VotingWebsite",
       //demo: "https://ruhawebshopnz.web.app",
       icons: [
@@ -44,6 +56,11 @@ const ProjectData = [
       description: "text",
       images: [
         "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      additionalImages: [
         "/ruhawebshop2.png",
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",
@@ -67,6 +84,11 @@ const ProjectData = [
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",
       ],
+      additionalImages: [
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
       github: "https://github.com/nemethzozzi/VotingWebsite",
       //demo: "https://ruhawebshopnz.web.app",
       icons: [
@@ -80,6 +102,11 @@ const ProjectData = [
       description: "",
       images: [
         "/ruhawebshop1.png",
+        "/ruhawebshop2.png",
+        "/ruhawebshop3.png",
+        "/ruhawebshop4.png",
+      ],
+      additionalImages: [
         "/ruhawebshop2.png",
         "/ruhawebshop3.png",
         "/ruhawebshop4.png",

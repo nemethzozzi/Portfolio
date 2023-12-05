@@ -16,6 +16,12 @@ const frontendData = [
         icon: ['icons/angular.png'],
         color:'bg-red-600',
       },
+      {
+        skill: 'Vue',
+        level: 10,
+        icon: ['icons/vue.png'],
+        color:'bg-emerald-500',
+      },
 
       {
         skill: 'HTML',
@@ -36,7 +42,7 @@ const frontendData = [
         skill: 'Tailwind',
         level: 70,
         icon: ['icons/tailwind.png'],
-        color:'bg-teal-300',  
+        color:'bg-teal-400',  
       },
 
       {
