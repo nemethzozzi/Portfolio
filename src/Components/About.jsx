@@ -25,7 +25,7 @@ const About = ({ darkMode }) => {
         <div className="w-full md:w-3/4 mt-20 md:ml-4 md:pr-4 order-2 md:order-1">
           <h1 className="text-4xl font-semibold">Hello,</h1>
           <h1 className="text-6xl font-bold mt-7">
-            <span className={darkMode ? "text-white" : "text-gray-800"}>I am</span>{" "}
+            <span className={darkMode ? "text-white" : "text-black"}>I am</span>{" "}
             <span className="text-sky-500">Zoltán Németh</span>
           </h1>
           <p className="text-2xl mt-8">Currently learning in SZTE university.</p>

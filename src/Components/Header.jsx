@@ -16,7 +16,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
         </div>
         <div className="flex items-center space-x-4">
           <button
-            className="text-2xl transition duration-300"
+            className="transition duration-300"
             onClick={toggleDarkMode}
           >
             {darkMode ? (
@@ -26,7 +26,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
             )}
           </button>
           <nav>
-            <ul className="flex space-x-4 text-3xl">
+            <ul className="flex space-x-4 text-2xl">
               <li>
                 <button
                   onClick={() => scrollToSection('about')}
