@@ -41,12 +41,12 @@ const skillsData = [
           icon: ['icons/nodejs.png'],
           color:'bg-green-500',   
         },
-        {
+        /*{
           skill: 'Scala',
           level: 10,
           icon: ['icons/scala.png'],
           color:'bg-red-600', 
-        },
+        },*/
 
       ];
 

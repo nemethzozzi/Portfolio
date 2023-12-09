@@ -16,12 +16,12 @@ const frontendData = [
         icon: ['icons/angular.png'],
         color:'bg-red-600',
       },
-      {
+      /*{
         skill: 'Vue',
         level: 10,
         icon: ['icons/vue.png'],
         color:'bg-emerald-500',
-      },
+      },*/
 
       {
         skill: 'HTML',
@@ -44,6 +44,12 @@ const frontendData = [
         icon: ['icons/tailwind.png'],
         color:'bg-teal-400',  
       },
+      /*{
+        skill: 'Boostrap',
+        level: 10,
+        icon: ['icons/boostrap.png'],
+        color:'bg-violet-500',  
+      },*/
 
       {
         skill: 'JavaScript',
