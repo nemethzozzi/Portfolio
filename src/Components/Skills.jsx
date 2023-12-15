@@ -20,9 +20,9 @@ const Skills = ({ darkMode }) => {
 
   return (
     <div id="skills" className={`p-2 max-w-screen-lg mx-auto ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-      <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
+      <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
         My Skills
-      </h2>
+      </h1>
 
       {/* Frontend and Backend Content */}
       <div className={`flex flex-col${isTabletOrMobile ? '' : 'md:flex-row'}`}>

@@ -80,7 +80,9 @@ const Contact = ({ darkMode }) => {
     <div id="contact">
       <div className={`flex items-center justify-center ${isMobile ? 'h-full' : 'min-h-screen'} ${darkMode ? 'bg-dark' : 'bg-light'}`}>
         <div className={`max-w-screen-xl mx-2 p-10 ${isMobile ? 'w-full' : isTablet ? 'w-3/4' : 'w-2/3'}`}>
-          <h1 className={`text-4xl md:text-6xl text-center font-bold animate-pulse ${darkMode ? 'text-white' : 'text-black'} mb-4`}>Contact Me</h1>
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold animate-pulse ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
+            Contact Me
+          </h1>
           <div className={`grid grid-cols-1 ${isTablet ? 'sm:grid-cols-2' : ''} lg:grid-cols-2 gap-4 sm:gap-8 mt-4 p-8 ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}>
             {contactItems.map((item, index) => (
               <div key={index} className={`flex items-center text-center ${darkMode ? 'text-white' : 'text-black'}`}>
