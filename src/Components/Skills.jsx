@@ -17,8 +17,8 @@ const Skills = ({ darkMode }) => {
   };
 
   return (
-    <div id="skills" className={`p-2 max-w-screen-md mx-auto ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-      <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-5 mt-3`}>
+    <div id="skills" className={`p-2 h-screen max-w-screen-md mx-auto ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+      <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
         My Skills
       </h2>
       <CardFlip isFlipped={isFlipped} flipDirection="horizontal">
@@ -44,11 +44,11 @@ const Skills = ({ darkMode }) => {
                 <img src={skill.icon[0]} alt={`${skill.skill} icon`} className="w-4 h-4 md:w-6 md:h-6" />
                 {/* Opacity Bar */}
                 <div
-                  className={`h-4 w-10/12 bg-gray-300 absolute rounded-lg top-1/2 transform -translate-y-1/2 left-1 md:left-8 right-10 md:right-2 ${darkMode ? 'opacity-30' : 'opacity-10'}`}
+                  className={`h-2 w-10/12 bg-gray-300 absolute rounded-lg top-1/2 transform -translate-y-1/2 left-1 md:left-8 right-10 md:right-2 ${darkMode ? 'opacity-30' : 'opacity-10'}`}
                 ></div>
                 {/* Colored Bar */}
                 <div
-                  className={`h-2 md:h-4 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
+                  className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
                     inView ? 'animate-grow-bar' : ''
                   } relative`}
                   style={{
@@ -57,7 +57,6 @@ const Skills = ({ darkMode }) => {
                     opacity: '1',
                   }}
                 >
-                  {inView ? `${skill.level}%` : '0%'}
                 </div>
                 <span className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.label}</span>
               </div>
@@ -90,11 +89,11 @@ const Skills = ({ darkMode }) => {
                 <img src={skill.icon[0]} alt={`${skill.skill} icon`} className="w-4 h-4 md:w-6 md:h-6" />
                 {/* Opacity Bar */}
                 <div
-                  className={`h-4 w-10/12 bg-gray-300 absolute rounded-lg top-1/2 transform -translate-y-1/2 left-1 md:left-8 right-10 md:right-2 ${darkMode ? 'opacity-30' : 'opacity-10'}`}
+                  className={`h-2 w-10/12 bg-gray-300 absolute rounded-lg top-1/2 transform -translate-y-1/2 left-1 md:left-8 right-10 md:right-2 ${darkMode ? 'opacity-30' : 'opacity-10'}`}
                 ></div>
                 {/* Colored Bar */}
                 <div
-                  className={`h-2 md:h-4 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
+                  className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
                     inView ? 'animate-grow-bar' : ''
                   } relative`}
                   style={{
@@ -103,7 +102,6 @@ const Skills = ({ darkMode }) => {
                     opacity: '1',
                   }}
                 >
-                  {inView ? `${skill.level}%` : '0%'}
                 </div>
                 <span className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.label}</span>
               </div>

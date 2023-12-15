@@ -37,20 +37,20 @@ const Contact = ({ darkMode }) => {
   return (
     <div id="contact">
       <div className={`flex items-center justify-center ${isMobile ? 'h-screen' : 'min-h-screen'} ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-        <div className={`max-w-screen-xl mx-8 p-10 ${isMobile ? 'w-full' : isTablet ? 'w-3/4' : 'w-2/3'}`}>
+        <div className={`max-w-screen-xl mx-2 p-10 ${isMobile ? 'w-full' : isTablet ? 'w-3/4' : 'w-2/3'}`}>
           <h1 className={`text-4xl md:text-6xl text-center font-bold animate-pulse ${darkMode ? 'text-white' : 'text-black'} mb-8`}>Contact Me</h1>
 
           {isMobile || isTablet ? (
             // Render contact items in mobile and tablet mode
-            <div className={`grid grid-cols-1 ${isTablet ? 'sm:grid-cols-2' : ''} gap-4 sm:gap-8 mt-8 border-4 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}>
+            <div className={`grid grid-cols-1 ${isTablet ? 'sm:grid-cols-2' : ''} gap-4 sm:gap-8 mt-8 border-4 bg-white bg-opacity-10 border-gray-500 rounded-3xl p-8 shadow-md ${darkMode ? 'bg-dark-secondary' : 'bg-light-secondary'}`}>
               {contactItems.map((item, index) => (
                 <div key={index} className={`flex items-center text-center ${darkMode ? 'text-white' : 'text-black'}`}>
                   <div className="flex flex-col items-center mt-2">
                     <img src={item.icon} alt={`${item.icon} icon`} className="w-8 h-8" />
                   </div>
                   <div className="flex flex-col items-start mt-2 ml-3">
-                    <span className="text-base font-semibold">{item.label}</span>
-                    <span className="text-xs">{item.text}</span>
+                    <span className={`text-base font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>{item.label}</span>
+                    <span className={`text-xs ${darkMode ? 'text-white' : 'text-black'}`}>{item.text}</span>
                   </div>
                 </div>
               ))}

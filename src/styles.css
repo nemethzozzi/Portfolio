@@ -19,7 +19,7 @@ button.relative .underline {
   left: 0;
   height: 2px;
   width: 0;
-  background-color: white; /* Adjust the color as needed */
+  background-color: white;
   transition: width 0.8s ease;
 }
 
@@ -42,3 +42,27 @@ button.relative .underline {
 .animation-container {
   animation: morph 8s ease-in-out infinite both alternate;
 }  
+
+
+/*Projects.jsx*/
+
+
+
+button.relative {
+  position: relative;
+}
+
+
+button.relative:hover .underline2 {
+  width: 100%;
+}
+
+button.relative .underline2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #0ea5e9;
+  transition: width 0.8s ease;
+}
