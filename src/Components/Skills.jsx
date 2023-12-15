@@ -19,32 +19,47 @@ const Skills = ({ darkMode }) => {
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1023 });
 
   return (
-    <div id="skills" className={`p-2 h-screen max-w-screen-lg mx-auto ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+    <div id="skills" className={`p-2 max-w-screen-lg mx-auto ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
         My Skills
       </h2>
 
       {/* Frontend and Backend Content */}
-      <div className={`flex flex-col ${isTabletOrMobile ? '' : 'md:flex-row'}`}>
+      <div className={`flex flex-col${isTabletOrMobile ? '' : 'md:flex-row'}`}>
         {/* Frontend Content */}
-        <div className={`flex-1 md:m-5 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refFrontend}>
+        <div className={`flex-1 md:m-5 mb-8 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refFrontend}>
           <h3 className={`text-xl md:text-2xl font-bold mb-3 md:mb-5 ml-1 md:ml-3 ${darkMode ? 'text-white' : 'text-black'}`}>
             Frontend
           </h3>
           {frontendData.map((skill, index) => (
-            <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-1 md:ml-3 md:relative`}>
+            <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-1 md:ml-3 md:relative mb-5`}>
               <img src={skill.icon[0]} alt={`${skill.skill} icon`} className="w-4 h-4 md:w-6 md:h-6" />
-              {/* Colored Bar */}
-              <div
-                className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
-                  inViewFrontend ? 'animate-grow-bar' : ''
-                } relative`}
-                style={{
-                  width: inViewFrontend ? `${skill.level}%` : '0',
-                  transition: inViewFrontend ? 'width 1.5s' : '0s',
-                  opacity: '1',
-                }}
-              ></div>
+              {/* Colored Bar with Opacity Background */}
+              <div className={`relative mb-1 md:mb-3 mt-1 md:mt-3`} style={{ width: '100%' }}>
+                {/* Opacity Background */}
+                <div
+                  className={`h-2 md:h-2 rounded-lg absolute top-0 left-2 bg-opacity-50 bg-gray-400`}
+                  style={{ width: '100%' }}
+                ></div>
+                {/* Skill Level Percentage */}
+                <div className="absolute bottom-3 w-full h-full flex items-center justify-end">
+                  <span className={`text-xs md:text-sm ${darkMode ? 'text-white' : 'text-black'}`}>
+                    {inViewBackend ? `${skill.level}%` : ''}
+                  </span>
+                </div>
+
+                {/* Colored Bar */}
+                <div
+                  className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg ${skill.color} bar ${
+                    inViewBackend ? 'animate-grow-bar' : ''
+                  } relative`}
+                  style={{
+                    width: inViewBackend ? `${skill.level}%` : '0',
+                    transition: inViewBackend ? 'width 1.5s' : '0s',
+                    opacity: '1',
+                  }}
+                ></div>
+              </div>
               <span className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.label}</span>
             </div>
           ))}
@@ -56,19 +71,34 @@ const Skills = ({ darkMode }) => {
             Backend
           </h3>
           {backendData.map((skill, index) => (
-            <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-1 md:ml-3 md:`}>
-              <img src={skill.icon[0]} alt={`${skill.skill} icon`} className="w-4 h-4 md:w-6 md:h-6" />
-              {/* Colored Bar */}
-              <div
-                className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg mb-1 md:mb-3 mt-1 md:mt-3 ${skill.color} bar ${
-                  inViewBackend ? 'animate-grow-bar' : ''
-                } relative`}
-                style={{
-                  width: inViewBackend ? `${skill.level}%` : '0',
-                  transition: inViewBackend ? 'width 1.5s' : '0s',
-                  opacity: '1',
-                }}
-              ></div>
+            <div key={index} className={`${darkMode ? 'text-white' : 'text-black'} flex items-center flex-1 ml-1 md:ml-3 md:relative mb-5`}>
+            <img src={skill.icon[0]} alt={`${skill.skill} icon`} className="w-4 h-4 md:w-6 md:h-6" />
+              {/* Colored Bar with Opacity Background */}
+              <div className={`relative mb-1 md:mb-3 mt-1 md:mt-3`} style={{ width: '100%' }}>
+                {/* Opacity Background */}
+                <div
+                  className={`h-2 md:h-2 rounded-lg absolute top-0 left-2 bg-opacity-50 bg-gray-400`}
+                  style={{ width: '100%' }}
+                ></div>
+                {/* Skill Level Percentage */}
+                <div className="absolute bottom-3 w-full h-full flex items-center justify-end">
+                  <span className={`text-xs md:text-sm ${darkMode ? 'text-white' : 'text-black'}`}>
+                    {inViewBackend ? `${skill.level}%` : ''}
+                  </span>
+                </div>
+
+                {/* Colored Bar */}
+                <div
+                  className={`h-2 md:h-2 ml-1 md:ml-2 rounded-lg ${skill.color} bar ${
+                    inViewBackend ? 'animate-grow-bar' : ''
+                  } relative`}
+                  style={{
+                    width: inViewBackend ? `${skill.level}%` : '0',
+                    transition: inViewBackend ? 'width 1.5s' : '0s',
+                    opacity: '1',
+                  }}
+                ></div>
+              </div>
               <span className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.label}</span>
             </div>
           ))}

@@ -90,7 +90,9 @@ const ProjectCard = ({ name, description, date, github, demo, icons, images, add
   return (
     <div id="projects" className={`p-4 ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className="max-w-screen-xl mx-8 ml-20">
-        <h1 className={`text-6xl text-center font-bold text-white mb-7 mt-10 ${darkMode ? 'text-gray-300' : ''}`}>My Projects</h1>
+      <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-bold text-white mb-7 mt-10 ${darkMode ? 'text-gray-300' : ''}`}>
+        My Projects
+      </h1>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
           {ProjectData.map((project, index) => (
             <ProjectCard key={index} {...project} />

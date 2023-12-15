@@ -21,7 +21,7 @@ const About = ({ darkMode }) => {
 
   return (
     <div id="about">
-      <div className={`h-screen mt-10 p-4 flex flex-col md:flex-row ml-20 ${darkMode ? "text-white" : "text-black"}`}>
+      <div className={`mt-10 mb-20 p-4 flex flex-col md:flex-row ml-20 ${darkMode ? "text-white" : "text-black"}`}>
         <div className="w-full md:w-3/4 mt-20 md:ml-4 md:pr-4 order-2 md:order-1">
           <h1 className="text-4xl font-semibold">Hello,</h1>
           <h1 className="text-6xl font-bold mt-7">

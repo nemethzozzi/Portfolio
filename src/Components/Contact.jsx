@@ -56,8 +56,16 @@ const Contact = ({ darkMode }) => {
               ))}
             </div>
           ) : (
-            // Render QR code in larger screens
-            <img src="qr.png" alt="QR Code" className="mx-auto w-1/3" />
+            // Render Google Map in larger screens
+            <iframe
+              title="Google Map"
+              width="100%"
+              height="400"
+              frameBorder="0"
+              style={{ border: 0 }}
+              src={`https://www.google.com/maps/embed/v1/place?q=Szeged&key=hHm3VNho9upDPgRh1ru2pqCEvsAIbCzV`}
+              allowFullScreen
+            ></iframe>
           )}
         </div>
       </div>
