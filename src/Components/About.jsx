@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const About = ({ darkMode }) => {
   // Function to handle the download action
@@ -19,36 +19,6 @@ const About = ({ darkMode }) => {
     document.body.removeChild(downloadLink);
   };
 
-  const [displayText, setDisplayText] = useState("I am");
-  const [isTyping, setIsTyping] = useState(true);
-
-  useEffect(() => {
-    // Function to handle the typing animation
-    const typingAnimation = () => {
-      const texts = [
-        { text: 'I am', duration: 2000 },
-        { text: 'Zoltán Németh', duration: 2000 },
-        { text: 'I study', duration: 2000 },
-        { text: 'Software Engineering', duration: 2000 },
-      ];
-
-      let index = 0;
-
-      const updateText = () => {
-        setDisplayText(texts[index].text);
-        setIsTyping(true);
-        index = (index + 1) % texts.length;
-
-        // Schedule the next update after the specified duration
-        setTimeout(updateText, texts[index].duration);
-      };
-
-      updateText();
-    };
-
-    typingAnimation();
-  }, []); // Run this effect only once when the component mounts
-
   return (
     <div id="about">
       <div className={`mt-10 mb-20 p-4 flex flex-col md:flex-row ml-20 ${darkMode ? "text-white" : "text-black"}`}>
@@ -61,7 +31,7 @@ const About = ({ darkMode }) => {
             <span className={darkMode ? "text-white" : "text-black"}>I am</span>{" "}
             <span className="text-sky-700">Zoltán Németh</span>
             <span className={darkMode ? "text-white" : "text-black"}>I study</span>{" "}
-            <span className="text-sky-700">Software Engineering</span>
+            <span className="text-sky-700">Software <Engineering></Engineering></span>
           </h1>
         </div>
           <p className="text-xl text-gray-400 font-medium mt-8">at Szeged University with a penchant for frontend development. I thrive in collaborative team settings, where the exchange of ideas fuels my passion for crafting seamless user experiences. Open to learning new technologies, I'm enthusiastic about contributing to innovative projects and continually expanding my skill set. </p>
