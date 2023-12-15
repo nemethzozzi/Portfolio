@@ -37,8 +37,6 @@ const Header = ({ toggleDarkMode, darkMode }) => {
           </button>
           {/* Navigation Menu */}
           <nav
-            id="navMenu"
-            className="md:flex flex-col md:flex-row transition-transform transform"
           >
             <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-2xl">
               <li>

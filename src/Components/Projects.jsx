@@ -35,13 +35,13 @@ const ProjectCard = ({ name, description, date, github, demo, icons, images, add
             ))}
           </Slider>
           {additionalImages && (
-            <div className="flex flex-wrap mt-4">
-              {additionalImages.map((image, index) => (
-                <div key={index} className={`w-1/${additionalImages.length} p-2`}>
-                  <img src={image} alt={`Additional Image ${index + 1}`} style={imageStyle} />
-                </div>
-              ))}
-            </div>
+            <div className="flex flex-wrap">
+            {additionalImages.slice(0, 3).map((image, index) => (
+              <div key={index} className="w-1/3 p-2">
+                <img src={image} alt={`Additional Image ${index + 1}`} style={imageStyle} />
+              </div>
+            ))}
+          </div>
           )}
         </div>
         <div className={`${isMobile ? 'w-full' : 'md:w-1/2 md:mt-0'} flex flex-col justify-between`}>
