@@ -21,20 +21,18 @@ const About = ({ darkMode }) => {
 
   return (
     <div id="about">
-      <div className={`mt-10 mb-20 p-4 flex flex-col md:flex-row ml-20 ${darkMode ? "text-white" : "text-black"}`}>
+      <div className="mt-10 mb-20 p-4 flex flex-col md:flex-row ml-20">
         <div className="w-full md:w-3/4 mt-20 md:ml-4 md:pr-4 order-2 md:order-1">
-          <h1 className="pr-5 text-4xl font-semibold">
+          <h1 className="text-gray-400 pr-5 text-4xl font-semibold">
             Hello
           </h1>
         <div className="animate-typing overflow-hidden whitespace-nowrap">
           <h1 className="text-5xl font-bold mt-7">
-            <span className={darkMode ? "text-white" : "text-black"}>I am</span>{" "}
+            <span className="text-gray-400">I am</span>{" "}
             <span className="text-sky-700">Zoltán Németh</span>
-            <span className={darkMode ? "text-white" : "text-black"}>I study</span>{" "}
-            <span className="text-sky-700">Software <Engineering></Engineering></span>
           </h1>
         </div>
-          <p className="text-xl text-gray-400 font-medium mt-8">at Szeged University with a penchant for frontend development. I thrive in collaborative team settings, where the exchange of ideas fuels my passion for crafting seamless user experiences. Open to learning new technologies, I'm enthusiastic about contributing to innovative projects and continually expanding my skill set. </p>
+          <p className="text-xl text-gray-400 font-medium mt-8">I study Software Engineering at Szeged University with a penchant for frontend development. I thrive in collaborative team settings, where the exchange of ideas fuels my passion for crafting seamless user experiences. Open to learning new technologies, I'm enthusiastic about contributing to innovative projects and continually expanding my skill set. </p>
           <div className="flex mt-8 space-x-4 sm:space-x-4">
             <a href="https://github.com/nemethzozzi" className="hover:text-sky-500 hover:scale-110 transition-transform">
               <svg className="svg-icon w-8 h-8 hover:fill-current" fill="#9ca3af" viewBox="0 0 16 16">
