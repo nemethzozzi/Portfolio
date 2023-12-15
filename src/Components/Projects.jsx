@@ -55,7 +55,13 @@ const ProjectCard = ({ name, description, date, github, demo, icons, images, add
               <div className="flex items-center mt-3">
                 {icons.map((icon, index) => (
                   <div key={index} className="mr-2 mb-5">
-                    <img src={icon} alt={`Icon ${index + 1}`} style={{ width: '20px', height: '20px' }} />
+                    <img
+                      src={icon}
+                      alt={`Icon ${index + 1}`}
+                      style={{ width: '30px', height: '30px', transition: 'transform 0.3s' }}
+                      onMouseEnter={(e) => (e.target.style.transform = 'translateY(-5px)')}
+                      onMouseLeave={(e) => (e.target.style.transform = 'translateY(0)')}
+                    />                  
                   </div>
                 ))}
               </div>

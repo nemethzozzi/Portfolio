@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const About = ({ darkMode }) => {
   // Function to handle the download action
@@ -19,19 +19,52 @@ const About = ({ darkMode }) => {
     document.body.removeChild(downloadLink);
   };
 
+  const [displayText, setDisplayText] = useState("I am");
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    // Function to handle the typing animation
+    const typingAnimation = () => {
+      const texts = [
+        { text: 'I am', duration: 2000 },
+        { text: 'Zoltán Németh', duration: 2000 },
+        { text: 'I study', duration: 2000 },
+        { text: 'Software Engineering', duration: 2000 },
+      ];
+
+      let index = 0;
+
+      const updateText = () => {
+        setDisplayText(texts[index].text);
+        setIsTyping(true);
+        index = (index + 1) % texts.length;
+
+        // Schedule the next update after the specified duration
+        setTimeout(updateText, texts[index].duration);
+      };
+
+      updateText();
+    };
+
+    typingAnimation();
+  }, []); // Run this effect only once when the component mounts
+
   return (
     <div id="about">
       <div className={`mt-10 mb-20 p-4 flex flex-col md:flex-row ml-20 ${darkMode ? "text-white" : "text-black"}`}>
         <div className="w-full md:w-3/4 mt-20 md:ml-4 md:pr-4 order-2 md:order-1">
-          <h1 className="text-4xl font-semibold">Hello,</h1>
-          <h1 className="text-6xl font-bold mt-7">
-            <span className={darkMode ? "text-white" : "text-black"}>I am</span>{" "}
-            <span className="text-sky-500">Zoltán Németh</span>
+          <h1 className="pr-5 text-4xl font-semibold">
+            Hello
           </h1>
-          <p className="text-2xl mt-8">Currently learning in SZTE university.</p>
-          <p className="text-2xl">I learn software engineering.</p>
-
-          
+        <div className="animate-typing overflow-hidden whitespace-nowrap">
+          <h1 className="text-5xl font-bold mt-7">
+            <span className={darkMode ? "text-white" : "text-black"}>I am</span>{" "}
+            <span className="text-sky-700">Zoltán Németh</span>
+            <span className={darkMode ? "text-white" : "text-black"}>I study</span>{" "}
+            <span className="text-sky-700">Software Engineering</span>
+          </h1>
+        </div>
+          <p className="text-xl text-gray-400 font-medium mt-8">at Szeged University with a penchant for frontend development. I thrive in collaborative team settings, where the exchange of ideas fuels my passion for crafting seamless user experiences. Open to learning new technologies, I'm enthusiastic about contributing to innovative projects and continually expanding my skill set. </p>
           <div className="flex mt-8 space-x-4 sm:space-x-4">
             <a href="https://github.com/nemethzozzi" className="hover:text-sky-500 hover:scale-110 transition-transform">
               <svg className="svg-icon w-8 h-8 hover:fill-current" fill="#9ca3af" viewBox="0 0 16 16">

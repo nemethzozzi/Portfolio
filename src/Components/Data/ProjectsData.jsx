@@ -45,8 +45,7 @@ const ProjectData = [
       icons: [
         "icons/php.png",
         "icons/css.png",
-        "icons/mysql.png",
-        "icons/xampp.png"
+        "icons/mysql.png"
       ],
       date: "2023.november",
 
