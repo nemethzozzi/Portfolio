@@ -76,28 +76,6 @@ const ProjectData = [
 
     },
     /*{
-      name: "Legyen ön is milliomos",
-      description: "",
-      images: [
-        "images/ruhawebshop1.png",
-        "images/ruhawebshop2.png",
-        "images/ruhawebshop3.png",
-        "images/ruhawebshop4.png",
-      ],
-      additionalImages: [
-        "images/ruhawebshop2.png",
-        "images/ruhawebshop3.png",
-        "images/ruhawebshop4.png",
-      ],
-      github: "https://github.com/nemethzozzi/VotingWebsite",
-      demo: "https://ruhawebshopnz.web.app",
-      icons: [
-        "icons/html.png",
-        "icons/javascript.png"
-      ],
-      date: "2023.november",
-    },*/
-    {
       name: "snake",
       description: "Seeking to diversify my skill set, I delved into the realm of game development with this Python-based project. The result is an engaging and interactive game that allowed me to explore the exciting field of game development.",
       images: [
@@ -117,7 +95,7 @@ const ProjectData = [
         "icons/python.png",
       ],
       date: "2023.november",
-    }
+    }*/
   ]
 
   export default ProjectData;

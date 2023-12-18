@@ -23,10 +23,10 @@ const Projects = ({ darkMode }) => {
   };
   
 
-const ProjectCard = ({ name, description, date, github, demo, icons, images, additionalImages }) => (
-  <div className={`mb-10 ${isMobile ? 'w-full' : isTablet ? 'w-full md:w-1/2' : 'w-3/4 mx-auto'}`}>
-    <div className={`bg-gray-300 bg-opacity-10 rounded-2xl flex flex-col md:flex-row items-center shadow-md border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} style={{ alignItems: 'flex-start' }}>
-        <div className={`${isMobile ? 'w-full' : 'md:w-1/2'} pr-8`}>
+  const ProjectCard = ({ name, description, date, github, demo, icons, images, additionalImages }) => (
+    <div className={`mb-10 ${isMobile ? 'w-full' : isTablet ? 'w-full' : 'w-3/4 mx-auto'}`}>
+      <div className={`bg-gray-300 bg-opacity-10 rounded-2xl flex flex-col md:flex-row items-center shadow-md border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} style={{ alignItems: isMobile || isTablet ? 'center' : 'flex-start' }}>
+        <div className={`${isMobile || isTablet ? 'w-full' : 'md:w-1/2'} pr-8`}>
           <Slider {...sliderSettings}>
             {images.map((image, index) => (
               <div key={index}>
@@ -36,15 +36,15 @@ const ProjectCard = ({ name, description, date, github, demo, icons, images, add
           </Slider>
           {additionalImages && (
             <div className="flex flex-wrap">
-            {additionalImages.slice(0, 3).map((image, index) => (
-              <div key={index} className="w-1/3 p-2">
-                <img src={image} alt={`Additional Image ${index + 1}`} style={imageStyle} />
-              </div>
-            ))}
-          </div>
+              {additionalImages.slice(0, 3).map((image, index) => (
+                <div key={index} className="w-1/3 p-2">
+                  <img src={image} alt={`Additional Image ${index + 1}`} style={imageStyle} />
+                </div>
+              ))}
+            </div>
           )}
         </div>
-        <div className={`${isMobile ? 'w-full' : 'md:w-1/2 md:mt-0'} flex flex-col justify-between`}>
+        <div className={`${isMobile || isTablet ? 'w-full' : 'md:w-1/2 md:mt-0'} flex flex-col justify-between`}>
           <div className='bg-gray-300 bg-opacity-10 shadow-md rounded-lg'>
           <h2 className={`text-3xl font-bold text-center mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
             <span>{name}</span>
@@ -94,7 +94,7 @@ const ProjectCard = ({ name, description, date, github, demo, icons, images, add
   );
 
   return (
-    <div id="projects" className={`p-4 ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+    <div id="projects" className={`p-4 flex items-center justify-center ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className={`${isMobile ? 'w-full' : 'max-w-screen-xl mx-8 ml-20'}`}>
       <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
         My Projects
