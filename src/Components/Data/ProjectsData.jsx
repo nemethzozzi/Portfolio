@@ -68,6 +68,7 @@ const ProjectData = [
       demo: "https://autowebshopnz.web.app",
       icons: [
         "icons/react.png",
+        "icons/javascript.png",
         "icons/tailwind.png",
         "icons/firebase.png"
       ],
@@ -75,27 +76,27 @@ const ProjectData = [
       
 
     },
-    /*{
+    {
       name: "snake",
       description: "Seeking to diversify my skill set, I delved into the realm of game development with this Python-based project. The result is an engaging and interactive game that allowed me to explore the exciting field of game development.",
       images: [
-        "images/ruhawebshop1.png",
-        "images/ruhawebshop2.png",
-        "images/ruhawebshop3.png",
-        "images/ruhawebshop4.png",
+        "images/snake1.png",
+        "images/snake2.png",
+        "images/snake3.png",
+        "images/snake4.png",
       ],
       additionalImages: [
-        "images/ruhawebshop2.png",
-        "images/ruhawebshop3.png",
-        "images/ruhawebshop4.png",
+        "images/snake2.png",
+        "images/snake3.png",
+        "images/snake4.png",
       ],
-      github: "https://github.com/nemethzozzi/VotingWebsite",
-      demo: "https://ruhawebshopnz.web.app",
+      github: "https://github.com/nemethzozzi/Snake",
+      demo: "",
       icons: [
         "icons/python.png",
       ],
       date: "2023.november",
-    }*/
+    }
   ]
 
   export default ProjectData;

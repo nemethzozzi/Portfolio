@@ -38,7 +38,7 @@ const Contact = ({ darkMode }) => {
 
   const [mapLongitude] = useState(20.1414);
   const [mapLatitude] = useState(46.2530);
-  const [mapZoom] = useState(8);
+  const [mapZoom] = useState(6);
   const [map, setMap] = useState(null);
   const [marker, setMarker] = useState(null);
 
