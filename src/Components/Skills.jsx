@@ -27,7 +27,17 @@ const Skills = ({ darkMode }) => {
       {/* Frontend and Backend Content */}
       <div className={`flex flex-col${isTabletOrMobile ? '' : 'md:flex-row'}`}>
         {/* Frontend Content */}
-        <div className={`flex-1 md:m-5 mb-8 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refFrontend}>
+        <div className={`flex-1 md:m-5 mb-8 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-sky-700 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refFrontend}
+              style={{
+                  transition: 'box-shadow 0.3s',
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.boxShadow = 'none';
+                }}>
           <h3 className={`text-xl md:text-2xl font-bold mb-3 md:mb-5 ml-1 md:ml-3 ${darkMode ? 'text-white' : 'text-black'}`}>
             Frontend
           </h3>
@@ -66,7 +76,16 @@ const Skills = ({ darkMode }) => {
         </div>
 
         {/* Backend Content */}
-        <div className={`flex-1 md:m-5 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-gray-500 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refBackend}>
+        <div className={`flex-1 md:m-5 mb-8 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl ${isTabletOrMobile ? '' : 'order-first md:order-last'} border-sky-700 border-2 ${darkMode ? 'dark-mode' : ''} p-6`} ref={refBackend}                 style={{
+                  transition: 'box-shadow 0.3s',
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.boxShadow = '0 0 20px rgba(3, 105, 161, 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.boxShadow = 'none';
+                }}>
           <h3 className={`text-xl md:text-2xl font-bold mb-3 md:mb-5 ml-1 md:ml-3 ${darkMode ? 'text-white' : 'text-black'}`}>
             Backend
           </h3>

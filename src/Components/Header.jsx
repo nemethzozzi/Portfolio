@@ -20,7 +20,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
   };
 
   return (
-    <header className={`bg-sky-800 bg-opacity-90 text-gray-400 py-2 fixed w-full top-0 shadow-md z-10 ${darkMode ? 'dark' : ''}`}>
+    <header className={`bg-sky-800 bg-opacity-90 text-gray-400 py-2 fixed w-full top-0 shadow-md z-20 ${darkMode ? 'dark' : ''}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-4xl font-bold mb-2">
           Portfolio

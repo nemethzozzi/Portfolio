@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: darkMode ? '#2d2d2d' : '#fff', color: darkMode ? '#fff' : '#000' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: darkMode ? '#2d2d2d' : '#f3f4f6', color: darkMode ? '#fff' : '#000' }}>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <div className="container mx-auto max-w-full" style={{ flex: 1 }}>
         <About darkMode={darkMode} />
