@@ -1,17 +1,43 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import emailjs from 'emailjs-com';
+import { useInView } from 'react-intersection-observer';
+
 
 const Contact = ({ darkMode }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+
+
+  const [contactVisible, setContactVisible] = useState(false);
+
+  useEffect(() => {
+    // Set the Contact visibility after a delay
+    const delay = 500;
+    const timeoutId = setTimeout(() => {
+      setContactVisible(true);
+    }, delay);
+
+    // Clear the timeout on component unmount
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '0px 0px -100px 0px', // Adjust the rootMargin based on your requirement
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setContactVisible(true);
+    }
+  }, [inView]);
 
   const [emailData, setEmailData] = useState({
     userEmail: '',
     emailTopic: '',
     emailMessage: '',
   });
-
 
 
   const handleInputChange = (e) => {
@@ -54,7 +80,7 @@ const Contact = ({ darkMode }) => {
   };
 
   return (
-     <div id="contact" className={`p-2 max-w-screen-lg mx-auto bg-${darkMode ? 'dark' : 'light'}-bg text-${darkMode ? 'white' : 'black'}`}>
+<div ref={ref} id="contact" className={`p-2 max-w-screen-lg mx-auto bg-${darkMode ? 'dark' : 'light'}-bg text-${darkMode ? 'white' : 'black'} ${inView ? 'fade-in' : ''}`}>
       <div className={`flex items-center justify-center ${isMobile ? 'h-full' : 'min-h-screen'}`}>
         <div className={`max-w-screen-xl mx-2 p-10 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl border-sky-700 border-2 ${isMobile ? 'w-full' : isTablet ? 'w-3/4' : 'w-2/3'}`}>
           <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 animate-pulse">

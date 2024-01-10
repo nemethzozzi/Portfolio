@@ -43,9 +43,51 @@ button.relative .underline {
   animation: morph 8s ease-in-out infinite both alternate;
 }  
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+  animation: slideInFromBottom 1s ease-out;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  visibility: hidden;
+}
+
+.slide-in-left-visible {
+  visibility: visible;
+  animation: slideInFromLeft 1s ease-out; 
+}
+
+
+
 
 /*Projects.jsx*/
-
 
 
 button.relative {
@@ -67,8 +109,20 @@ button.relative .underline2 {
   transition: width 0.8s ease;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-/*Footer.jsx*/
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
 
 
 

@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectData from './Data/ProjectsData';
 import { useMediaQuery } from 'react-responsive';
+import { useInView } from 'react-intersection-observer';
 
 const Projects = ({ darkMode }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
 
+  const [projectVisible, setProjectVisible] = useState(false);
+
+  useEffect(() => {
+    // Set the project visibility after a delay
+    const delay = 500;
+    const timeoutId = setTimeout(() => {
+      setProjectVisible(true);
+    }, delay);
+
+    // Clear the timeout on component unmount
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '0px 0px -100px 0px', // Adjust the rootMargin based on your requirement
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setProjectVisible(true);
+    }
+  }, [inView]);
+
+
   const ProjectCard = ({ name, date, github, demo, icons, images }) => (
-    <div className="mb-10">
+    <div className={`mb-10 ${projectVisible ? 'fade-in' : ''}`}>
       <div className={`bg-gray-300 bg-opacity-10 rounded-2xl flex flex-col items-start justify-between shadow-md border-sky-700 border-2 ${darkMode ? 'dark-mode' : ''} p-6 h-full`}
         style={{
           transition: 'box-shadow 0.3s',
@@ -80,12 +106,12 @@ const Projects = ({ darkMode }) => {
   );
 
   return (
-    <div id="projects" className={`p-4 flex items-center justify-center ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+    <div ref={ref} id="projects" className={`p-4 flex items-center justify-center ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className={`${isMobile ? 'w-full' : 'max-w-screen-xl mx-8 ml-20'}`}>
         <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold ${darkMode ? 'text-white' : 'text-black'} mb-10 mt-20`}>
           My Projects
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ${projectVisible ? 'fade-in' : ''}`}>
           {ProjectData.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
