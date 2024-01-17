@@ -8,19 +8,8 @@ const Contact = ({ darkMode }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
 
+  const [boxVisible, setBoxVisible] = useState(false);
 
-  const [contactVisible, setContactVisible] = useState(false);
-
-  useEffect(() => {
-    // Set the Contact visibility after a delay
-    const delay = 500;
-    const timeoutId = setTimeout(() => {
-      setContactVisible(true);
-    }, delay);
-
-    // Clear the timeout on component unmount
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -29,7 +18,7 @@ const Contact = ({ darkMode }) => {
 
   useEffect(() => {
     if (inView) {
-      setContactVisible(true);
+      setBoxVisible(true);
     }
   }, [inView]);
 
@@ -79,8 +68,8 @@ const Contact = ({ darkMode }) => {
     }
   };
 
-  return (
-<div ref={ref} id="contact" className={`p-2 max-w-screen-lg mx-auto bg-${darkMode ? 'dark' : 'light'}-bg text-${darkMode ? 'white' : 'black'} ${inView ? 'fade-in' : ''}`}>
+return (
+  <div ref={ref} id="contact" className={`p-2 max-w-screen-lg mx-auto bg-${darkMode ? 'dark' : 'light'}-bg text-${darkMode ? 'white' : 'black'} ${boxVisible ? 'fade-in' : ''}`}>
       <div className={`flex items-center justify-center ${isMobile ? 'h-full' : 'min-h-screen'}`}>
         <div className={`max-w-screen-xl mx-2 p-10 bg-gray-300 bg-opacity-10 shadow-md rounded-2xl border-sky-700 border-2 ${isMobile ? 'w-full' : isTablet ? 'w-3/4' : 'w-2/3'}`}>
           <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 animate-pulse">

@@ -34,17 +34,7 @@ const Projects = ({ darkMode }) => {
 
   const ProjectCard = ({ name, date, github, demo, icons, images }) => (
     <div className={`mb-10 ${projectVisible ? 'fade-in' : ''}`}>
-      <div className={`bg-gray-300 bg-opacity-10 rounded-2xl flex flex-col items-start justify-between shadow-md border-sky-700 border-2 ${darkMode ? 'dark-mode' : ''} p-6 h-full`}
-        style={{
-          transition: 'box-shadow 0.3s',
-          boxShadow: 'none',
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.boxShadow = 'none';
-        }}>
+      <div className={`bg-gray-300 bg-opacity-10 rounded-2xl flex flex-col items-start justify-between shadow-md border-sky-700 border-2 ${darkMode ? 'dark-mode' : ''} p-4 h-full hover:scale-105 transition-all`}>
         <div className="mb-4 text-center">
           <img
             src={images[0]}

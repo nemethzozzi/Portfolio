@@ -4,49 +4,23 @@ import React from 'react';
 const skillsData = [
 
         {
-          skill: 'PHP',
-          level: 40,
-          icon: ['icons/php.png'],
-          color:'bg-purple-400',
-    
+          skill: 'PHP' 
         },
         {
-          skill: 'Python',
-          level: 60,
-          icon: ['icons/python.png'],
-          color:'bg-blue-500',  
+          skill: 'Python'
         },
         {
-          skill: 'MySQL',
-          level: 75,
-          icon: ['icons/mysql.png'],
-          color:'bg-orange-400',  
+          skill: 'MySQL'
         },
         {
-          skill: 'C',
-          level: 45,
-          icon: ['icons/C.png'],
-          color:'bg-indigo-500',  
+          skill: 'Java'
         },
         {
-          skill: 'Java',
-          level: 25,
-          icon: ['icons/java.png'],
-          color:'bg-blue-600',
-   
+          skill: 'Node js',  
         },
         {
-          skill: 'Node js',
-          level: 20,
-          icon: ['icons/nodejs.png'],
-          color:'bg-green-500',   
+          skill: 'Firebase',  
         },
-        /*{
-          skill: 'Scala',
-          level: 10,
-          icon: ['icons/scala.png'],
-          color:'bg-red-600', 
-        },*/
 
       ];
 

@@ -26,6 +26,7 @@ const ProjectData = [
       demo: "http://votingwebsitenz.great-site.net/homepage.php",
       icons: [
         "icons/php.png",
+        "icons/html.png",
         "icons/css.png",
         "icons/mysql.png"
       ],
