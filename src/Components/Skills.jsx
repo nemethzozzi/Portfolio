@@ -41,7 +41,7 @@ const Skills = ({ darkMode }) => {
           </h3>
           <div className={`flex flex-wrap`}>
             {frontendData.map((skill, index) => (
-              <button key={index} className={`${darkMode ? 'text-white' : 'text-black'} ml-1 md:ml-3 md:relative mb-5 border-2 bg-gray-300 bg-opacity-10 border-sky-700 p-2 rounded-xl hover:bg-sky-700 hover:scale-105 hover:text-white font-bold duration-300 transition-all shadow-xl ${smallboxVisible ? 'visible' : 'invisible'}`}>
+              <button key={index} className={`${darkMode ? 'text-white' : 'text-black'} ml-1 md:ml-3 md:relative mb-5 border-2 bg-gray-300 bg-opacity-10 border-sky-700 p-2 rounded-xl hover:bg-sky-700 hover:scale-105 font-bold duration-300 transition-all shadow-xl ${smallboxVisible ? 'visible' : 'invisible'}`}>
                 <div className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.skill}</div>
               </button>
             ))}
@@ -55,7 +55,7 @@ const Skills = ({ darkMode }) => {
           </h3>
           <div className={`flex flex-wrap`}>
             {backendData.map((skill, index) => (
-              <button key={index} className={`${darkMode ? 'text-white' : 'text-black'} ml-1 md:ml-3 md:relative mb-5 border-2 border-sky-700 p-2 rounded-xl hover:bg-sky-700 hover:scale-105 font-bold transition-all shadow-xl ${smallboxVisible ? 'visible' : 'invisible'}`}>
+              <button key={index} className={`${darkMode ? 'text-white' : 'text-black'} ml-1 md:ml-3 md:relative mb-5 border-2 bg-gray-300 bg-opacity-10 border-sky-700 p-2 rounded-xl hover:bg-sky-700 hover:scale-105 font-bold duration-300 transition-all shadow-xl ${smallboxVisible ? 'visible' : 'invisible'}`}>
                 <div className={`ml-1 ${darkMode ? 'text-white' : 'text-black'}`}>{skill.skill}</div>
               </button>
             ))}
