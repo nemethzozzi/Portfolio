@@ -32,7 +32,7 @@ const Footer = ({ isTablet }) => {
 
   return (
     <footer className="bg-sky-700 footer-container relative">
-      <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-8 mt-8 p-8 bg-light-secondary relative z-10`}>
+      <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-8 p-8 bg-light-secondary relative z-10`}>
         {contactItems.map((item, index) => (
           <div key={index} className="flex items-center text-center">
             <div className="flex flex-col items-center mt-2">

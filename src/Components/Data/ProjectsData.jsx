@@ -12,6 +12,7 @@ const ProjectData = [
       demo: "https://ruhawebshopnz.web.app",
       icons: [
         "icons/angular.png",
+        "icons/typescript.png",
         "icons/css.png",
         "icons/firebase.png"
       ],

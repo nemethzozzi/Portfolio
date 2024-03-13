@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactTyped from 'react-typed';
 import { FaGithub, FaTwitter, FaEnvelope, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import Design from './Design';
 
 const About = ({ darkMode }) => {
   const [imageVisible, setImageVisible] = useState(false);
@@ -72,14 +73,15 @@ const About = ({ darkMode }) => {
 
   return (
     <div ref={ref} id="about">
-      <div className="mt-10 mb-20 p-4 flex flex-col md:flex-row ml-4 md:ml-20">
+      <Design />
+      <div className="mt-10 p-4 flex flex-col md:flex-row ml-4 md:ml-20">
         <div className="w-full md:w-3/4 md:ml-4 md:pr-4 order-2 md:order-1">
-          <h1 className={`mt-14 pr-5 text-xl md:text-2xl lg:text-3xl font-semibold text-${darkMode ? 'white' : 'black'} ${text1SlideVisible ? 'slide-in-left-visible' : 'slide-in-left'}`}>
+          <h1 className={`mt-14 pr-5 text-xl md:text-2xl lg:text-3xl font-semibold text-white ${text1SlideVisible ? 'slide-in-left-visible' : 'slide-in-left'}`}>
             Hello
           </h1>
           <div>
             <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold mt-7 ${text2SlideVisible ? 'slide-in-left-visible' : 'slide-in-left'}`}>
-              <span className={`text-${darkMode ? 'white' : 'black'}`}>I'm{' '}</span>
+              <span className={`text-white`}>I'm{' '}</span>
               <span className="text-sky-700">
                 <ReactTyped
                   strings={["Németh Zoltán", "a Software Engineer"]}
@@ -92,7 +94,7 @@ const About = ({ darkMode }) => {
               </span>
             </h1>
           </div>
-          <p className={`text-base md:text-base lg:text-lg font-medium mt-8 max-w-sm md:max-w-md lg:max-w-lg text-${darkMode ? 'white' : 'black'} ${text3SlideVisible ? 'slide-in-left-visible' : 'slide-in-left'}`}>
+          <p className={`text-base md:text-base lg:text-lg font-medium mt-8 max-w-sm md:max-w-md lg:max-w-lg text-white ${text3SlideVisible ? 'slide-in-left-visible' : 'slide-in-left'}`}>
             Study at Szeged University with a penchant for frontend development. I thrive in collaborative team settings, where the exchange of ideas fuels my passion for crafting seamless user experiences. Open to learning new technologies, I'm enthusiastic about contributing to innovative projects and continually expanding my skill set.
           </p>
 
@@ -102,6 +104,7 @@ const About = ({ darkMode }) => {
                 style={{
                   transition: 'box-shadow 0.3s',
                   boxShadow: 'none',
+                  color: 'white',
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
@@ -117,6 +120,7 @@ const About = ({ darkMode }) => {
                 style={{
                   transition: 'box-shadow 0.3s',
                   boxShadow: 'none',
+                  color: 'white',
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
@@ -132,6 +136,7 @@ const About = ({ darkMode }) => {
                 style={{
                   transition: 'box-shadow 0.3s',
                   boxShadow: 'none',
+                  color: 'white',
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
@@ -147,6 +152,7 @@ const About = ({ darkMode }) => {
                 style={{
                   transition: 'box-shadow 0.3s',
                   boxShadow: 'none',
+                  color: 'white',
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
@@ -162,6 +168,7 @@ const About = ({ darkMode }) => {
                 style={{
                   transition: 'box-shadow 0.3s',
                   boxShadow: 'none',
+                  color: 'white',
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.boxShadow = '0 0 30px rgba(3, 105, 161, 0.5)';
