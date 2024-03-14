@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ProjectData = [
+const ProjectsData = [
     {
       name: "Clothe Webshop",
       images: [
@@ -31,7 +31,7 @@ const ProjectData = [
         "icons/css.png",
         "icons/mysql.png"
       ],
-      date: "2023.november",
+      date: "2023.sept-2024.dec",
 
     },
     {
@@ -47,7 +47,7 @@ const ProjectData = [
         "icons/tailwind.png",
         "icons/firebase.png"
       ],
-      date: "2023.december",
+      date: "2023.dec",
       
 
     },
@@ -61,8 +61,8 @@ const ProjectData = [
       icons: [
         "icons/python.png",
       ],
-      date: "2023.november",
+      date: "2023.nov",
     }
   ]
 
-  export default ProjectData;
+  export default ProjectsData;

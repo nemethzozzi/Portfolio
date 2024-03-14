@@ -4,31 +4,31 @@ const predefinedRatings = [
   {
     name: 'Courtney Cook',
     stars: 4,
-    text: 'Great experience with the car rental service. Will use again!',
+    text: 'This is just an example message',
     image: './images/users/user1.jpg',
   },
   {
     name: 'Alexander Hipp',
-    stars: 1,
-    text: 'Excellent service and a fantastic car selection. Highly recommended!',
+    stars: 4,
+    text: 'Well done',
     image: './images/users/user2.jpg',
   },
   {
     name: 'Jane Smith',
     stars: 2,
-    text: 'Service was okay. Room for improvement.',
+    text: 'Good Job',
     image: './images/users/user3.jpg',
   },
   {
     name: 'Courtney Cook',
     stars: 4,
-    text: 'Excellent service and a fantastic car selection. Highly recommended!',
+    text: 'Lorem opsium',
     image: './images/users/user4.jpg',
   },
   {
     name: 'Jurica Koletić',
     stars: 5,
-    text: 'Excellent service and a fantastic car selection. Highly recommended!',
+    text: 'Excellent job!',
     image: './images/users/user5.jpg',
   },
   // Add more predefined ratings as needed
@@ -70,7 +70,7 @@ const Ratings = () => {
 
   return (
     <div className="rating-container flex flex-col items-center justify-center h-56 md:h-80">
-      <div className="rating-box-container flex items-center space-x-2 md:space-x-4">
+      <div className="rating-box-container flex items-center space-x-2 md:space-x-4 ">
         <button
           onClick={handlePrevRating}
           className="text-white bg-white hover:bg-neutral-100 transition-all rounded-lg p-2 focus:outline-none transform hover:-translate-x-1"

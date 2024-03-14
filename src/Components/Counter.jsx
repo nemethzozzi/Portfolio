@@ -41,7 +41,7 @@ const Counter = () => {
   }, []);
 
   const projectsProps = useSpring({
-    number: isVisible ? 10 : 0,
+    number: isVisible ? 7 : 0,
     from: { number: 0 },
     config: { duration: 2000 },
   });
@@ -53,7 +53,7 @@ const Counter = () => {
   });
 
   const experienceProps = useSpring({
-    number: isVisible ? 3 : 0,
+    number: isVisible ? 2 : 0,
     from: { number: 0 },
     config: { duration: 2000 },
   });
@@ -61,7 +61,7 @@ const Counter = () => {
   return (
     <div
       ref={counterRef}
-      className={`counter-container ${isMobile ? 'flex flex-col items-center justify-center' : 'flex justify-center'}`}
+      className={`counter-container ${isMobile ? 'flex flex-col items-center justify-center' : 'flex justify-center'} text-white`}
     >
       <div
         className={`counter-item font-semibold ${isMobile ? 'mt-6' : 'mx-4 mr-20'}`}
@@ -85,7 +85,7 @@ const Counter = () => {
         className={`counter-item font-semibold ${isMobile ? 'mt-6' : 'mx-4'}`}
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
-        <p className="text-center">Experience</p>
+        <p className="text-center">Years of Experience</p>
         <div className={`text-9xl ${isMobile ? 'mt-2' : ''}`}>
           <animated.span>{experienceProps.number.interpolate((val) => Math.floor(val))}</animated.span>
         </div>
