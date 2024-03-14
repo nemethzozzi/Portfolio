@@ -34,7 +34,7 @@ const TeamProjectsData = [
 
     },
     {
-      name: "Film adatbase",
+      name: "Film database",
       images: [
         "images/film.png",
       ],
