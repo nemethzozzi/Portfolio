@@ -5,7 +5,7 @@ const ProjectsData = [
   {
     name: "Social Media WebApp",
     images: [
-      "images/ruhawebshop.png",
+      "images/socialmediawebapp.png",
 
     ],
     github: "https://github.com/nemethzozzi/SocialMediaWebApp",

@@ -8,7 +8,7 @@ const TeamProjectsData = [
         "images/melodyHUB.png",
       ],
       github: "https://github.com/nemethzozzi/MelodyHub_VEGLEGES",
-      demo: "",
+      demo: "http://melodyhub.great-site.net",
       icons: [
         "icons/html.png",
         "icons/css.png",
