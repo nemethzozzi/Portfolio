@@ -45,20 +45,20 @@ function App() {
         </div>
         <div style={{ backgroundColor: darkMode ? '#2d2d2d' : '#f3f4f6'}}>
         <Projects darkMode={darkMode}/>
-        <div className="md:-mt-32 sm:-mt-12 -mt-8"> 
+        {/* <div className="md:-mt-32 sm:-mt-12 -mt-8"> 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#0369a1" fillOpacity="1" d="M0,160L40,170.7C80,181,160,203,240,197.3C320,192,400,160,480,154.7C560,149,640,171,720,186.7C800,203,880,213,960,197.3C1040,181,1120,139,1200,138.7C1280,139,1360,181,1400,202.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
           </svg>
+        </div> */}
         </div>
-        </div>
-        <div style={{ backgroundColor: '#0369a1'}}>
+        {/* <div style={{ backgroundColor: '#0369a1'}}>
         <Ratings />
         <div> 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill={darkMode ? "#2d2d2d" : "#f3f4f6"} fillOpacity="1" d="M0,0L40,21.3C80,43,160,85,240,96C320,107,400,85,480,69.3C560,53,640,43,720,48C800,53,880,75,960,80C1040,85,1120,75,1200,64C1280,53,1360,43,1400,37.3L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
           </svg>
         </div>
-        </div>
+        </div> */}
         <div style={{ backgroundColor: darkMode ? '#2d2d2d' : '#f3f4f6'}}>
         <Contact darkMode={darkMode}/>
         </div>

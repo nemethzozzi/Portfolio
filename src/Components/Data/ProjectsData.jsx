@@ -2,6 +2,24 @@ import React from 'react';
 
 
 const ProjectsData = [
+  {
+    name: "Social Media WebApp",
+    images: [
+      "images/ruhawebshop.png",
+
+    ],
+    github: "https://github.com/nemethzozzi/SocialMediaWebApp",
+    demo: "http://socialmediawebapp.s3-website.eu-north-1.amazonaws.com",
+    icons: [
+      "icons/react.png",
+      "icons/javascript.png",
+      "icons/tailwind.png",
+      "icons/aws.png",
+      "icons/mongodb.png",
+      "icons/expressjs.png"
+    ],
+    date: "2024.jan-may",
+    },
     {
       name: "Clothe Webshop",
       images: [
@@ -31,7 +49,7 @@ const ProjectsData = [
         "icons/css.png",
         "icons/mysql.png"
       ],
-      date: "2023.sept-2024.dec",
+      date: "2023.sept-dec",
 
     },
     {

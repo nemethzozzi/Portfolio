@@ -56,7 +56,7 @@ const About = ({ darkMode }) => {
 
   const handleDownloadCV = () => {
     // Replace 'your-cv-file.pdf' with the actual filename/path of your CV
-    const cvFile = '/Németh Zoltán CV.pdf';
+    const cvFile = '/CV online.pdf';
     // Create a link element
     const downloadLink = document.createElement('a');
     // Set the href attribute to the CV file

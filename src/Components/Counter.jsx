@@ -41,7 +41,7 @@ const Counter = () => {
   }, []);
 
   const projectsProps = useSpring({
-    number: isVisible ? 7 : 0,
+    number: isVisible ? 5 : 0,
     from: { number: 0 },
     config: { duration: 2000 },
   });
@@ -53,7 +53,7 @@ const Counter = () => {
   });
 
   const experienceProps = useSpring({
-    number: isVisible ? 2 : 0,
+    number: isVisible ? 0 : 0,
     from: { number: 0 },
     config: { duration: 2000 },
   });
