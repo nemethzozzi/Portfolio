@@ -18,7 +18,7 @@ const frontendData = [
         icon: ['icons/html.png'],
       },
       {
-        skill: 'Tailwind',
+        skill: 'TailwindCSS',
         icon: ['icons/tailwind.png'],
       },
       {
