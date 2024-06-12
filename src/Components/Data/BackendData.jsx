@@ -13,13 +13,22 @@ const skillsData = [
           skill: 'MySQL'
         },
         {
+          skill: 'Mongodb',  
+        },
+        {
           skill: 'Java'
         },
         {
-          skill: 'Node js',  
+          skill: 'NodeJS',  
+        },
+        {
+          skill: 'ExpressJS',  
         },
         {
           skill: 'Firebase',  
+        },
+        {
+          skill: 'AWS',  
         },
 
       ];

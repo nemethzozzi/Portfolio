@@ -30,7 +30,7 @@ const frontendData = [
         icon: ['icons/javascript.png'],
       },
       {
-        skill: 'Typscript',
+        skill: 'Typescript',
         icon: ['icons/typescript.png'],
       },
 
